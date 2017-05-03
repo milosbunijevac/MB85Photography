@@ -1,0 +1,19 @@
+{
+  "name": "mb85photography",
+  "version": "1.0.0",
+  "description": "My coding and photography skills have merged.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milosbunijevac/MB85Photography.git"
+  },
+  "author": "Milos Bunijevac",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/milosbunijevac/MB85Photography/issues"
+  },
+  "homepage": "https://github.com/milosbunijevac/MB85Photography#readme"
+}
