@@ -1,4 +1,7 @@
 import React from 'react';
+import LeftPane from './LeftPane.jsx';
+import RightPane from './RightPane.jsx';
+import CenterPane from './CenterPane.jsx';
 
 class App extends React.Component {
   constructor() {
@@ -9,7 +12,17 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>This is the app component</h1>
+        <div className="container-fluid">
+          <div className = "col-md-3 leftPaned">
+            <LeftPane />
+          </div>
+          <div className = "col-md-6 centerPaned">
+            <CenterPane />
+          </div>
+          <div className = "col-md-3 rightPaned">
+            <RightPane />
+          </div>
+        </div>
       </div>
     );
   }

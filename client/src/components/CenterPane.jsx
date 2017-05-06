@@ -1,6 +1,6 @@
 import React from 'react';
 
-class RightPane extends React.Component {
+class CenterPane extends React.Component {
   constructor() {
     super();
     this.state = { someKey: 'someValue' };
@@ -9,7 +9,7 @@ class RightPane extends React.Component {
   render() {
     return (
       <div>
-        <p> Right Pane </p>
+        <p> Center Pane </p>
       </div>
     );
   }
@@ -19,4 +19,4 @@ class RightPane extends React.Component {
   }
 }
 
-export default RightPane;
+export default CenterPane;
