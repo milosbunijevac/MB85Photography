@@ -3,6 +3,9 @@ import LeftPane from './LeftPane.jsx';
 import RightPane from './RightPane.jsx';
 import CenterPane from './CenterPane.jsx';
 import TopPane from './TopPane.jsx';
+import Models from './Models.jsx';
+import Projects from './Projects.jsx';
+import Contact from './Contact.jsx';
 
 class App extends React.Component {
   constructor() {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-class LeftPane extends React.Component {
+class Models extends React.Component {
   constructor() {
     super();
     this.state = { someKey: 'someValue' };
@@ -8,10 +8,8 @@ class LeftPane extends React.Component {
 
   render() {
     return (
-      <div className = 'descriptoBar'>
-        <p><a href="#">Link</a></p>
-        <p><a href="#">Link</a></p>
-        <p><a href="#">Link</a></p>
+      <div>
+        <p>Models page</p>
       </div>
     );
   }
@@ -21,4 +19,4 @@ class LeftPane extends React.Component {
   }
 }
 
-export default LeftPane;
+export default Models;
