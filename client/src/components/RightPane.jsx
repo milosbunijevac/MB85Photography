@@ -3,19 +3,18 @@ import React from 'react';
 class RightPane extends React.Component {
   constructor() {
     super();
-    this.state = { someKey: 'someValue' };
+    this.state = { nothing: 'nothing' };
   }
 
   render() {
     return (
       <div>
-        <p> Right Pane </p>
       </div>
     );
   }
 
   componentDidMount() {
-    this.setState({ someKey: 'otherValue' });
+    this.setState({ nothing: 'nothing' });
   }
 }
 

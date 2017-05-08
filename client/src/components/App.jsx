@@ -2,6 +2,7 @@ import React from 'react';
 import LeftPane from './LeftPane.jsx';
 import RightPane from './RightPane.jsx';
 import CenterPane from './CenterPane.jsx';
+import TopPane from './TopPane.jsx';
 
 class App extends React.Component {
   constructor() {
@@ -13,14 +14,18 @@ class App extends React.Component {
     return (
       <div>
         <div className="container-fluid">
-          <div className = "col-md-3 leftPaned">
-            <LeftPane />
+          <div>
+            <TopPane />
           </div>
-          <div className = "col-md-6 centerPaned">
-            <CenterPane />
-          </div>
-          <div className = "col-md-3 rightPaned">
-            <RightPane />
+          <div className="container-fluid text-center">    
+            <div className="row content">
+              <div className="col-sm-2 sidenav">
+                <LeftPane />
+              </div>
+              <div className="col-sm-10 text-left"> 
+                <CenterPane />
+              </div>
+            </div>
           </div>
         </div>
       </div>

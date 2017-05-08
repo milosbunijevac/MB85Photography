@@ -9,7 +9,9 @@ class LeftPane extends React.Component {
   render() {
     return (
       <div>
-        <p>Left Pane</p>
+        <p><a href="#">Link</a></p>
+        <p><a href="#">Link</a></p>
+        <p><a href="#">Link</a></p>
       </div>
     );
   }

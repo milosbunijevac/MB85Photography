@@ -9542,6 +9542,10 @@ var _CenterPane = __webpack_require__(83);
 
 var _CenterPane2 = _interopRequireDefault(_CenterPane);
 
+var _TopPane = __webpack_require__(186);
+
+var _TopPane2 = _interopRequireDefault(_TopPane);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -9573,18 +9577,26 @@ var App = function (_React$Component) {
           { className: 'container-fluid' },
           _react2.default.createElement(
             'div',
-            { className: 'col-md-3 leftPaned' },
-            _react2.default.createElement(_LeftPane2.default, null)
+            null,
+            _react2.default.createElement(_TopPane2.default, null)
           ),
           _react2.default.createElement(
             'div',
-            { className: 'col-md-6 centerPaned' },
-            _react2.default.createElement(_CenterPane2.default, null)
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'col-md-3 rightPaned' },
-            _react2.default.createElement(_RightPane2.default, null)
+            { className: 'container-fluid text-center' },
+            _react2.default.createElement(
+              'div',
+              { className: 'row content' },
+              _react2.default.createElement(
+                'div',
+                { className: 'col-sm-2 sidenav' },
+                _react2.default.createElement(_LeftPane2.default, null)
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-sm-10 text-left' },
+                _react2.default.createElement(_CenterPane2.default, null)
+              )
+            )
           )
         )
       );
@@ -9650,9 +9662,14 @@ var CenterPane = function (_React$Component) {
         'div',
         null,
         _react2.default.createElement(
+          'h1',
+          null,
+          'Welcome'
+        ),
+        _react2.default.createElement(
           'p',
           null,
-          ' Center Pane '
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
         )
       );
     }
@@ -9714,7 +9731,29 @@ var LeftPane = function (_React$Component) {
         _react2.default.createElement(
           'p',
           null,
-          'Left Pane'
+          _react2.default.createElement(
+            'a',
+            { href: '#' },
+            'Link'
+          )
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          _react2.default.createElement(
+            'a',
+            { href: '#' },
+            'Link'
+          )
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          _react2.default.createElement(
+            'a',
+            { href: '#' },
+            'Link'
+          )
         )
       );
     }
@@ -9763,27 +9802,19 @@ var RightPane = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (RightPane.__proto__ || Object.getPrototypeOf(RightPane)).call(this));
 
-    _this.state = { someKey: 'someValue' };
+    _this.state = { nothing: 'nothing' };
     return _this;
   }
 
   _createClass(RightPane, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-          'p',
-          null,
-          ' Right Pane '
-        )
-      );
+      return _react2.default.createElement('div', null);
     }
   }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
-      this.setState({ someKey: 'otherValue' });
+      this.setState({ nothing: 'nothing' });
     }
   }]);
 
@@ -22267,6 +22298,137 @@ function traverseAllChildren(children, callback, traverseContext) {
 
 module.exports = traverseAllChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 186 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(20);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var TopPane = function (_React$Component) {
+  _inherits(TopPane, _React$Component);
+
+  function TopPane(props) {
+    _classCallCheck(this, TopPane);
+
+    return _possibleConstructorReturn(this, (TopPane.__proto__ || Object.getPrototypeOf(TopPane)).call(this, props));
+  }
+
+  _createClass(TopPane, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+          "nav",
+          { className: "navbar navbar-inverse" },
+          _react2.default.createElement(
+            "div",
+            { className: "container-fluid" },
+            _react2.default.createElement(
+              "div",
+              { className: "navbar-header" },
+              _react2.default.createElement(
+                "button",
+                { type: "button", className: "navbar-toggle", "data-toggle": "collapse", "data-target": "#myNavbar" },
+                _react2.default.createElement("span", { className: "icon-bar" }),
+                _react2.default.createElement("span", { className: "icon-bar" }),
+                _react2.default.createElement("span", { className: "icon-bar" })
+              ),
+              _react2.default.createElement(
+                "a",
+                { className: "navbar-brand", href: "#" },
+                "Logo"
+              )
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "collapse navbar-collapse", id: "myNavbar" },
+              _react2.default.createElement(
+                "ul",
+                { className: "nav navbar-nav" },
+                _react2.default.createElement(
+                  "li",
+                  { className: "active" },
+                  _react2.default.createElement(
+                    "a",
+                    { href: "#" },
+                    "Home"
+                  )
+                ),
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  _react2.default.createElement(
+                    "a",
+                    { href: "#" },
+                    "About"
+                  )
+                ),
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  _react2.default.createElement(
+                    "a",
+                    { href: "#" },
+                    "Projects"
+                  )
+                ),
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  _react2.default.createElement(
+                    "a",
+                    { href: "#" },
+                    "Contact"
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                "ul",
+                { className: "nav navbar-nav navbar-right" },
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  _react2.default.createElement(
+                    "a",
+                    { href: "#" },
+                    _react2.default.createElement("span", { className: "glyphicon glyphicon-log-in" }),
+                    " Login"
+                  )
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return TopPane;
+}(_react2.default.Component);
+
+exports.default = TopPane;
 
 /***/ })
 /******/ ]);
