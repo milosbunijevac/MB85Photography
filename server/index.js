@@ -11,6 +11,9 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 
 app.use(express.static('client'));
+app.use(express.static('css'));
+app.use(express.static('fonts'));
+app.use(express.static('js'));
 
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '../client/src', 'index.html'));
