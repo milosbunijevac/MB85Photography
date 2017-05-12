@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 class TopPane extends React.Component {
   constructor(props) {
@@ -16,15 +17,15 @@ class TopPane extends React.Component {
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>                        
               </button>
-              <a className="navbar-brand" href="#">Logo</a>
+              <Link className="navbar-brand" to={'/'}>Logo</Link>
             </div>
             <div className="collapse navbar-collapse" id="myNavbar">
               <ul className="nav navbar-nav">
-                <li className="active"><a href="#">Home</a></li>
-                <li><a href="/models">Models</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/about">About Me</a></li>
+                <li className="active"><Link to = {'/'}>Home</Link></li>
+                <li><Link to = {'/models'}> Models</Link></li>
+                <li><Link to = {'/projects'}>Projects</Link></li>
+                <li><Link to = {'/contact'}>Contact</Link></li>
+                <li><Link to = {'/about'}>About Me</Link></li>
               </ul>
               <ul className="nav navbar-nav navbar-right">
                 <li><a href="#"><span className="glyphicon glyphicon-log-in"></span> Login</a></li>

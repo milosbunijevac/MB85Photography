@@ -6,6 +6,7 @@ import TopPane from './TopPane.jsx';
 import Models from './Models.jsx';
 import Projects from './Projects.jsx';
 import Contact from './Contact.jsx';
+import Router from 'react-router';
 
 class App extends React.Component {
   constructor() {
@@ -26,7 +27,7 @@ class App extends React.Component {
                 <LeftPane />
               </div>
               <div className="col-sm-10 text-left"> 
-                <CenterPane />
+                {this.props.children}
               </div>
             </div>
           </div>

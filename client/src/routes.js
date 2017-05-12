@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route } from 'react-router';
+import { Router, Route, browserHistory } from 'react-router';
 
 import App from './components/App.jsx';
 import Models from './components/Models.jsx';
@@ -9,10 +9,12 @@ import About from './components/About.jsx';
 import CenterPane from './components/CenterPane.jsx';
 
 export default (
-  <Router path="/" component={App}>
-    <Route path="/models" component={Models.jsx} />
-    <Route path="/projects" component={Projects} />
-    <Route path="/contact" component={Contact} />
-    <Route path="/about" component={About} />
+  <Router history = {browserHistory}>
+      <Route path="/" component={App}>
+         <Route path="/models" component={Models} />
+         <Route path="/projects" component={Projects} />
+         <Route path="/contact" component={Contact} />
+         <Route path="/about" component={About} />
+      </Route>
   </Router>
 );

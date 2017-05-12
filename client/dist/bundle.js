@@ -12892,7 +12892,7 @@ module.exports = getIteratorFn;
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+   value: true
 });
 
 var _react = __webpack_require__(6);
@@ -12928,12 +12928,16 @@ var _CenterPane2 = _interopRequireDefault(_CenterPane);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _react2.default.createElement(
-  _reactRouter.Router,
-  { path: '/', component: _App2.default },
-  _react2.default.createElement(_reactRouter.Route, { path: '/models', component: _Models2.default.jsx }),
-  _react2.default.createElement(_reactRouter.Route, { path: '/projects', component: _Projects2.default }),
-  _react2.default.createElement(_reactRouter.Route, { path: '/contact', component: _Contact2.default }),
-  _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _About2.default })
+   _reactRouter.Router,
+   { history: _reactRouter.browserHistory },
+   _react2.default.createElement(
+      _reactRouter.Route,
+      { path: '/', component: _App2.default },
+      _react2.default.createElement(_reactRouter.Route, { path: '/models', component: _Models2.default }),
+      _react2.default.createElement(_reactRouter.Route, { path: '/projects', component: _Projects2.default }),
+      _react2.default.createElement(_reactRouter.Route, { path: '/contact', component: _Contact2.default }),
+      _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _About2.default })
+   )
 );
 
 /***/ }),
@@ -13044,6 +13048,10 @@ var _Contact = __webpack_require__(73);
 
 var _Contact2 = _interopRequireDefault(_Contact);
 
+var _reactRouter = __webpack_require__(71);
+
+var _reactRouter2 = _interopRequireDefault(_reactRouter);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -13092,7 +13100,7 @@ var App = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'col-sm-10 text-left' },
-                _react2.default.createElement(_CenterPane2.default, null)
+                this.props.children
               )
             )
           )
@@ -13261,6 +13269,8 @@ var _react = __webpack_require__(6);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouter = __webpack_require__(71);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -13279,96 +13289,96 @@ var TopPane = function (_React$Component) {
   }
 
   _createClass(TopPane, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
+        'div',
         null,
         _react2.default.createElement(
-          "nav",
-          { className: "navbar navbar-inverse" },
+          'nav',
+          { className: 'navbar navbar-inverse' },
           _react2.default.createElement(
-            "div",
-            { className: "container-fluid" },
+            'div',
+            { className: 'container-fluid' },
             _react2.default.createElement(
-              "div",
-              { className: "navbar-header" },
+              'div',
+              { className: 'navbar-header' },
               _react2.default.createElement(
-                "button",
-                { type: "button", className: "navbar-toggle", "data-toggle": "collapse", "data-target": "#myNavbar" },
-                _react2.default.createElement("span", { className: "icon-bar" }),
-                _react2.default.createElement("span", { className: "icon-bar" }),
-                _react2.default.createElement("span", { className: "icon-bar" })
+                'button',
+                { type: 'button', className: 'navbar-toggle', 'data-toggle': 'collapse', 'data-target': '#myNavbar' },
+                _react2.default.createElement('span', { className: 'icon-bar' }),
+                _react2.default.createElement('span', { className: 'icon-bar' }),
+                _react2.default.createElement('span', { className: 'icon-bar' })
               ),
               _react2.default.createElement(
-                "a",
-                { className: "navbar-brand", href: "#" },
-                "Logo"
+                _reactRouter.Link,
+                { className: 'navbar-brand', to: '/' },
+                'Logo'
               )
             ),
             _react2.default.createElement(
-              "div",
-              { className: "collapse navbar-collapse", id: "myNavbar" },
+              'div',
+              { className: 'collapse navbar-collapse', id: 'myNavbar' },
               _react2.default.createElement(
-                "ul",
-                { className: "nav navbar-nav" },
+                'ul',
+                { className: 'nav navbar-nav' },
                 _react2.default.createElement(
-                  "li",
-                  { className: "active" },
+                  'li',
+                  { className: 'active' },
                   _react2.default.createElement(
-                    "a",
-                    { href: "#" },
-                    "Home"
+                    _reactRouter.Link,
+                    { to: '/' },
+                    'Home'
                   )
                 ),
                 _react2.default.createElement(
-                  "li",
+                  'li',
                   null,
                   _react2.default.createElement(
-                    "a",
-                    { href: "/models" },
-                    "Models"
+                    _reactRouter.Link,
+                    { to: '/models' },
+                    ' Models'
                   )
                 ),
                 _react2.default.createElement(
-                  "li",
+                  'li',
                   null,
                   _react2.default.createElement(
-                    "a",
-                    { href: "/projects" },
-                    "Projects"
+                    _reactRouter.Link,
+                    { to: '/projects' },
+                    'Projects'
                   )
                 ),
                 _react2.default.createElement(
-                  "li",
+                  'li',
                   null,
                   _react2.default.createElement(
-                    "a",
-                    { href: "/contact" },
-                    "Contact"
+                    _reactRouter.Link,
+                    { to: '/contact' },
+                    'Contact'
                   )
                 ),
                 _react2.default.createElement(
-                  "li",
+                  'li',
                   null,
                   _react2.default.createElement(
-                    "a",
-                    { href: "/about" },
-                    "About Me"
+                    _reactRouter.Link,
+                    { to: '/about' },
+                    'About Me'
                   )
                 )
               ),
               _react2.default.createElement(
-                "ul",
-                { className: "nav navbar-nav navbar-right" },
+                'ul',
+                { className: 'nav navbar-nav navbar-right' },
                 _react2.default.createElement(
-                  "li",
+                  'li',
                   null,
                   _react2.default.createElement(
-                    "a",
-                    { href: "#" },
-                    _react2.default.createElement("span", { className: "glyphicon glyphicon-log-in" }),
-                    " Login"
+                    'a',
+                    { href: '#' },
+                    _react2.default.createElement('span', { className: 'glyphicon glyphicon-log-in' }),
+                    ' Login'
                   )
                 )
               )
