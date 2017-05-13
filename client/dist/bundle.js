@@ -13032,9 +13032,18 @@ var About = function (_React$Component) {
         'div',
         null,
         _react2.default.createElement(
-          'p',
-          null,
-          'My passion for photography started on a trip to San Francisco 3 years ago. Since then, I\'ve worked with some of the top models in New York City and have participated in three fashion weeks working runway shows. I shoot at various locations since I moved back to Cleveland, Ohio in November. Feel free to contact me using the form below if you have any questions, requests or business inquiries. Thanks!'
+          'div',
+          { className: 'col-sm-4' },
+          _react2.default.createElement('img', { className: 'aboutimage', src: 'rockpic.jpg' })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'col-sm-8' },
+          _react2.default.createElement(
+            'p',
+            null,
+            'My passion for photography started on a trip to San Francisco 3 years ago. Since then, I\'ve worked with some of the top models in New York City and have participated in three fashion weeks working runway shows. I shoot at various locations since I moved back to Cleveland, Ohio in November. Feel free to contact me using the form below if you have any questions, requests or business inquiries. Thanks!'
+          )
         )
       );
     }
@@ -13350,7 +13359,7 @@ var TopPane = function (_React$Component) {
               _react2.default.createElement(
                 _reactRouter.Link,
                 { className: 'navbar-brand', to: '/' },
-                'Logo'
+                'MB'
               )
             ),
             _react2.default.createElement(
