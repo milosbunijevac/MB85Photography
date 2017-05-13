@@ -8464,14 +8464,52 @@ var Contact = function (_React$Component) {
         _react2.default.createElement(
           'p',
           null,
-          'My passion for photography started on a trip to San Francisco 3 years ago. Since then, I\'ve worked with some of the top models in New York City and have participated in three fashion weeks working runway shows. I shoot at various locations since I moved back to Cleveland, Ohio in November. Feel free to contact me using the form below if you have any questions, requests or business inquiries. Thanks!'
+          'This site isn\'t the only place you can find my work at. I\'ve linked my social media accounts below.'
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'row' },
+          _react2.default.createElement(
+            'div',
+            { className: 'col-md-12' },
+            _react2.default.createElement(
+              'a',
+              { className: 'btn btn-social-icon btn-lg btn-instagram', href: 'http://instagram.com/mb85photography' },
+              _react2.default.createElement('i', { className: 'fa fa-instagram fa-3x' })
+            ),
+            _react2.default.createElement(
+              'a',
+              { className: 'btn btn-social-icon btn-lg btn-twitter', href: 'https://twitter.com/MB85Photography' },
+              _react2.default.createElement('i', { className: 'fa fa-twitter fa-3x' })
+            ),
+            _react2.default.createElement(
+              'a',
+              { className: 'btn btn-social-icon btn-lg btn-flickr', href: 'https://www.flickr.com/people/130256806@N05/' },
+              _react2.default.createElement('i', { className: 'fa fa-flickr fa-3x' })
+            ),
+            _react2.default.createElement(
+              'a',
+              { className: 'btn btn-social-icon btn-lg btn-tumblr', href: 'http://mb85photography.tumblr.com/' },
+              _react2.default.createElement('i', { className: 'fa fa-tumblr fa-3x' })
+            )
+          ),
+          _react2.default.createElement(
+            'p',
+            { className: 'socialdesc' },
+            ' My handle on all of the above accounts will be MB85Photography. Send me an email at MB85Photography@gmail.com'
+          ),
+          _react2.default.createElement(
+            'a',
+            { href: 'mailto:Mb85Photography@gmail.com' },
+            ' ',
+            _react2.default.createElement(
+              'button',
+              { type: 'button', className: 'btn btn-email', action: 'mailto:MB85Photography@gmail.com' },
+              _react2.default.createElement('i', { className: 'fa fa-envelope fa-2x' })
+            )
+          )
         )
       );
-    }
-  }, {
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      this.setState({ someKey: 'otherValue' });
     }
   }]);
 
@@ -12991,9 +13029,13 @@ var About = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'p',
+        'div',
         null,
-        'This is the About Component'
+        _react2.default.createElement(
+          'p',
+          null,
+          'My passion for photography started on a trip to San Francisco 3 years ago. Since then, I\'ve worked with some of the top models in New York City and have participated in three fashion weeks working runway shows. I shoot at various locations since I moved back to Cleveland, Ohio in November. Feel free to contact me using the form below if you have any questions, requests or business inquiries. Thanks!'
+        )
       );
     }
   }]);
@@ -13094,12 +13136,7 @@ var App = function (_React$Component) {
               { className: 'row content' },
               _react2.default.createElement(
                 'div',
-                { className: 'col-sm-2 sidenav' },
-                _react2.default.createElement(_LeftPane2.default, null)
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'col-sm-10 text-left' },
+                { className: 'col-sm-12 text-center' },
                 this.props.children
               )
             )
@@ -13365,20 +13402,6 @@ var TopPane = function (_React$Component) {
                     _reactRouter.Link,
                     { to: '/about' },
                     'About Me'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'ul',
-                { className: 'nav navbar-nav navbar-right' },
-                _react2.default.createElement(
-                  'li',
-                  null,
-                  _react2.default.createElement(
-                    'a',
-                    { href: '#' },
-                    _react2.default.createElement('span', { className: 'glyphicon glyphicon-log-in' }),
-                    ' Login'
                   )
                 )
               )

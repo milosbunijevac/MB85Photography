@@ -23,10 +23,7 @@ class App extends React.Component {
           </div>
           <div className="container-fluid text-center">    
             <div className="row content">
-              <div className="col-sm-2 sidenav">
-                <LeftPane />
-              </div>
-              <div className="col-sm-10 text-left"> 
+              <div className="col-sm-12 text-center"> 
                 {this.props.children}
               </div>
             </div>

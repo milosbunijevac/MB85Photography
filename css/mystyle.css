@@ -2,6 +2,21 @@ body{
   background-color: #aea5ba;
 }
 
+/* This is the status bar on the left side of the screen that hasn't been implemented yet. */
 .descriptoBar {
   background-color: #d7c1cc
+}
+
+/* This is the text right below the social media icons. It indicates how far off the buttons it is. */
+.socialdesc {
+  margin-top: 60px;
+}
+
+/*This is how far apart the social media icon buttons are.*/
+a.btn.btn-social-icon.btn-lg { 
+  margin-right: 10px;
+}
+
+button.btn.btn-email {
+  padding: 5px 16px;
 }

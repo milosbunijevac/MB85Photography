@@ -27,9 +27,6 @@ class TopPane extends React.Component {
                 <li><Link to = {'/contact'}>Contact</Link></li>
                 <li><Link to = {'/about'}>About Me</Link></li>
               </ul>
-              <ul className="nav navbar-nav navbar-right">
-                <li><a href="#"><span className="glyphicon glyphicon-log-in"></span> Login</a></li>
-              </ul>
             </div>
           </div>
         </nav>
