@@ -8562,9 +8562,74 @@ var Models = function (_React$Component) {
         'div',
         null,
         _react2.default.createElement(
-          'p',
-          null,
-          'Models page'
+          'div',
+          { className: 'col-sm-3' },
+          _react2.default.createElement(
+            'nav',
+            { className: 'navbar navbar-inverse modelbar' },
+            _react2.default.createElement(
+              'div',
+              { className: 'container-fluid' },
+              _react2.default.createElement(
+                'div',
+                { className: 'navbar-header' },
+                _react2.default.createElement(
+                  'button',
+                  { type: 'button', className: 'navbar-toggle', 'data-toggle': 'collapse', 'data-target': '#myNavbar2' },
+                  _react2.default.createElement('span', { className: 'icon-bar' }),
+                  _react2.default.createElement('span', { className: 'icon-bar' }),
+                  _react2.default.createElement('span', { className: 'icon-bar' })
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'collapse navbar-collapse', id: 'myNavbar2' },
+                _react2.default.createElement(
+                  'ul',
+                  { className: 'nav navbar-nav modelnavbar' },
+                  _react2.default.createElement(
+                    'li',
+                    null,
+                    'TEST LINK 1'
+                  ),
+                  _react2.default.createElement(
+                    'li',
+                    null,
+                    'TEST LINK 2'
+                  ),
+                  _react2.default.createElement(
+                    'li',
+                    null,
+                    'TEST LINK 3'
+                  ),
+                  _react2.default.createElement(
+                    'li',
+                    null,
+                    'TEST LINK 4'
+                  ),
+                  _react2.default.createElement(
+                    'li',
+                    null,
+                    'TEST LINK 5'
+                  ),
+                  _react2.default.createElement(
+                    'li',
+                    null,
+                    'TEST LINK 6'
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'col-sm-9 text-left' },
+          _react2.default.createElement(
+            'p',
+            null,
+            'Models page'
+          )
         )
       );
     }
