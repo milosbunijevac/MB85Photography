@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/milosbunijevac/MB85Photography#readme",
   "dependencies": {
+    "aws-sdk": "^2.50.0",
     "bootstrap": "^4.0.0-alpha.6",
     "express": "^4.15.2",
     "nodemon": "^1.11.0",
