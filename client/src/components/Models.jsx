@@ -1,9 +1,20 @@
 import React from 'react';
+import axios from 'axios';
 
 class Models extends React.Component {
   constructor() {
     super();
-    this.state = { someKey: 'someValue' };
+    this.state = { modelList: '' };
+  }
+
+  componentDidMount() {
+    axios({
+      method: 'get',
+      url: '/modelcall'
+    })
+  .then(function(response) {
+    console.log('the response from axios get is ', response);
+  });
   }
 
   render() {
@@ -39,10 +50,6 @@ class Models extends React.Component {
 
       </div>
     );
-  }
-
-  componentDidMount() {
-    this.setState({ someKey: 'otherValue' });
   }
 }
 
