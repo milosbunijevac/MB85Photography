@@ -34,7 +34,16 @@ app.post('/modelcall', function(req, res) {
     if (err) {
       console.log(err, null);
     }
-    res.send(data);
+    var arrayNames = [];
+    data.Contents.forEach(function(value) {
+      var folderName;
+      if (value.Size === 0) {
+        folderName = value.Key.split('+').join(' ');
+        arrayNames.push(folderName);
+        console.log(folderName);
+      }
+    });
+    res.send(arrayNames);
   });
 });
 
