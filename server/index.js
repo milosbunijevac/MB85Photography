@@ -38,9 +38,8 @@ app.post('/modelcall', function(req, res) {
     data.Contents.forEach(function(value) {
       var folderName;
       if (value.Size === 0) {
-        folderName = value.Key.split('+').join(' ');
+        folderName = value.Key.split('+').join(' ').replace(/\/$/, '');
         arrayNames.push(folderName);
-        console.log(folderName);
       }
     });
     res.send(arrayNames);
