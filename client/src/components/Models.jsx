@@ -9,7 +9,7 @@ class Models extends React.Component {
 
   componentDidMount() {
     axios({
-      method: 'get',
+      method: 'GET',
       url: '/modelcall'
     })
   .then(function(response) {

@@ -3,7 +3,6 @@ var path = require('path');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var axios = require('axios');
-var awsget = require('./aws');
 
 
 var port = process.env.PORT || 3000;

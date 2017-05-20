@@ -9250,7 +9250,7 @@ var Models = function (_React$Component) {
     key: 'componentDidMount',
     value: function componentDidMount() {
       (0, _axios2.default)({
-        method: 'get',
+        method: 'GET',
         url: '/modelcall'
       }).then(function (response) {
         console.log('the response from axios get is ', response);
