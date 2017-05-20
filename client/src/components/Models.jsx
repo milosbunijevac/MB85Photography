@@ -5,17 +5,6 @@ class Models extends React.Component {
   constructor() {
     super();
     this.state = { modelList: '' };
-
-    axios({
-      method: 'POST',
-      url: '/modelcall'
-    })
-    .then((response) => {
-      console.log('this is the axios call from models.jsx (the response) :', response);
-    })
-    .catch((error) => {
-      console.log('this is an error from the axios call in models.jsx', error);
-    });
   }
 
 

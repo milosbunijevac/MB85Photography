@@ -7,11 +7,26 @@ import Models from './Models.jsx';
 import Projects from './Projects.jsx';
 import Contact from './Contact.jsx';
 import Router from 'react-router';
+import axios from 'axios';
 
 class App extends React.Component {
   constructor() {
     super();
-    this.state = { none: 'none' };
+    this.state = { modelBucket: [] };
+  }
+
+  componentWillMount() {
+    axios({
+      method: 'POST',
+      url: '/modelcall'
+    })
+    .then((response) => {
+      console.log('this is the axios call from models.jsx (the response) :', response);
+      this.setState({modelBucket: response});
+    })
+    .catch((error) => {
+      console.log('this is an error from the axios call in models.jsx', error);
+    });
   }
 
   render() {

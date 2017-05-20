@@ -9,6 +9,7 @@ class ModelCard extends React.Component {
   render () {
     return (
       <div>
+        <p>THIS IS THE ModelCard COMPONENT.</p>
       </div>
     );
   }
