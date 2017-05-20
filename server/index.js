@@ -29,7 +29,7 @@ app.get('*', function(req, res) {
 });
 
 app.get('/modelcall', function(req, res) {
-
+  res.send('this is the response from modelcall');
 });
 
 app.listen(port, function() {
