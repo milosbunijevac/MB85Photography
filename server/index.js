@@ -42,6 +42,7 @@ app.post('/modelcall', function(req, res) {
         arrayNames.push(folderName);
       }
     });
+    res.status(200);
     res.send(arrayNames);
   });
 });
