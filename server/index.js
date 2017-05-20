@@ -29,23 +29,7 @@ app.get('*', function(req, res) {
 });
 
 app.get('/modelcall', function(req, res) {
-  awsget.objectLister(awsget.listparams, function(err, data) {
-    if (err) {
-      console.log('This error is in index.js objectLister ', err);
-    }
-    console.log('does the function get to the arrayNames part in index.js?');
-    var arrayNames = [];
-    data.Contents.forEach(function(value) {
-      var folderName;
-      if (value.Size === 0) {
-        folderName = value.Key.split('+').join(' ');
-        arrayNames.push(folderName);
-        console.log(folderName);
-      }
-    });
-    console.log(arrayNames);
-    
-  });
+
 });
 
 app.listen(port, function() {
