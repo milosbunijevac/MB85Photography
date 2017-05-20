@@ -27,7 +27,8 @@ app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, '../client/src', 'index.html'));
 });
 
-app.get('/modelcall', function(req, res) {
+app.post('/modelcall', function(req, res) {
+  console.log('the get modelcall is being called in the server');
   res.send('this is the response from modelcall');
 });
 

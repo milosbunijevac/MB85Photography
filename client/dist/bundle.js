@@ -9243,20 +9243,19 @@ var Models = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (Models.__proto__ || Object.getPrototypeOf(Models)).call(this));
 
     _this.state = { modelList: '' };
+
+    (0, _axios2.default)({
+      method: 'POST',
+      url: '/modelcall'
+    }).then(function (response) {
+      console.log('this is the axios call from models.jsx (the response) :', response);
+    }).catch(function (error) {
+      console.log('this is an error from the axios call in models.jsx');
+    });
     return _this;
   }
 
   _createClass(Models, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      (0, _axios2.default)({
-        method: 'GET',
-        url: '/modelcall'
-      }).then(function (response) {
-        console.log('the response from axios get is ', response);
-      });
-    }
-  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
