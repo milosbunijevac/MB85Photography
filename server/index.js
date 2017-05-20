@@ -3,6 +3,7 @@ var path = require('path');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var axios = require('axios');
+var awsget = require('./aws');
 
 
 var port = process.env.PORT || 3000;
@@ -11,6 +12,7 @@ var app = express();
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static('client'));
 app.use(express.static('css'));
@@ -28,8 +30,12 @@ app.get('*', function(req, res) {
 });
 
 app.post('/modelcall', function(req, res) {
-  console.log('the get modelcall is being called in the server');
-  res.send('this is the response from modelcall');
+  awsget.bucketNameLister(awsget.listparams, function(err, data) {
+    if (err) {
+      console.log(err, null);
+    }
+    res.send(data);
+  });
 });
 
 app.listen(port, function() {
