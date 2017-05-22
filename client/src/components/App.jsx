@@ -39,7 +39,12 @@ class App extends React.Component {
           <div className="container-fluid text-center">    
             <div className="row content">
               <div className="col-sm-12 text-center"> 
-                {this.props.children}
+                {React.Children.map(this.props.children, child => React.cloneElement(child,
+                  { 
+                    modelNames: this.state.modelBucket.data,
+                    path: this.props.route.path
+                  })
+                )}
               </div>
             </div>
           </div>
