@@ -1,4 +1,5 @@
 import React from 'react';
+import ModelCard from './ModelCard.jsx';
 import axios from 'axios';
 
 class Models extends React.Component {
@@ -14,7 +15,7 @@ class Models extends React.Component {
         {this.props.modelNames.map((model) => {
           return (
             <div>
-              {model}
+              <ModelCard model={model} />
             </div>
           );
         })}

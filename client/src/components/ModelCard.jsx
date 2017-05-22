@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 
 class ModelCard extends React.Component {
   constructor(props) {
@@ -9,7 +9,7 @@ class ModelCard extends React.Component {
   render () {
     return (
       <div>
-        <p>THIS IS THE ModelCard COMPONENT.</p>
+        <p>Name: {this.props.model}</p>
       </div>
     );
   }
