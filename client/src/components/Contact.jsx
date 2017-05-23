@@ -8,7 +8,7 @@ class Contact extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className = "text-center">
         <p>This site isn't the only place you can find my work at. I've linked my social media accounts below.</p>
 
         <div className="row">

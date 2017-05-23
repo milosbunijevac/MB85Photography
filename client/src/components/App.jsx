@@ -36,6 +36,7 @@ class App extends React.Component {
           <div>
             <TopPane />
           </div>
+
           <div className="container-fluid">    
             <div className="row content imageThumbMargin">
               <div> 
