@@ -14,7 +14,7 @@ class Models extends React.Component {
         <p>Models Page</p>
         {this.props.modelNames.map((model, i) => {
           return (
-            <div key={i}>
+            <div key={i} className = "imageThumbs">
               <ModelCard key={i} model={model} />
             </div>
           );
