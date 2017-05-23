@@ -19,8 +19,6 @@ class Models extends React.Component {
             </div>
           );
         })}
-        
-
       </div>
     );
   }
