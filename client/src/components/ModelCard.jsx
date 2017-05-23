@@ -9,7 +9,8 @@ class ModelCard extends React.Component {
   render () {
     return (
       <div>
-        {/*<p>Name: {this.props.model}</p>*/}
+        {/*{this.props.]}
+        <p>Name: {this.props.}</p>*/}
       </div>
     );
   }

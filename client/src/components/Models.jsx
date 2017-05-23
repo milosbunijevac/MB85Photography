@@ -5,7 +5,7 @@ import axios from 'axios';
 class Models extends React.Component {
   constructor() {
     super();
-    this.state = { modelList: '' };
+    this.state = { modelList: [] };
   }
 
   render() {
@@ -19,6 +19,7 @@ class Models extends React.Component {
             </div>
           );
         })}*/}
+        
 
       </div>
     );

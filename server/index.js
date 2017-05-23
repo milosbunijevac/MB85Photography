@@ -37,6 +37,7 @@ app.post('/modelcall', function(req, res) {
     var arrayNames = [];
     var thumbObjs = {};
     var folderName;
+    var arrayforMap = [];
     data.Contents.forEach(function(value) {
       
       if (value.Size === 0) {
@@ -46,6 +47,7 @@ app.post('/modelcall', function(req, res) {
       }
       if ( value.Key.includes('Thumb')) {
         thumbObjs[folderName] = awsget.amazonLink + value.Key;
+        arrayforMap.push(thumbObjs);
       }
     });
     res.status(200);
