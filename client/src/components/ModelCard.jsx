@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 class ModelCard extends React.Component {
   constructor(props) {
@@ -9,8 +10,10 @@ class ModelCard extends React.Component {
   render () {
     return (
       <div>
-        <img src={this.props.model.imageUrl} />
-        <p className="text-center imageMarginRight"> Name: {this.props.model.name}</p>
+        <Link to={'/'}><div>
+          <img src={this.props.model.imageUrl} />
+          <p className="text-center imageMarginRight"> Name: {this.props.model.name}</p>
+        </div></Link>
       </div>
     );
   }
