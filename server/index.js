@@ -39,19 +39,17 @@ app.post('/modelcall', function(req, res) {
     var folderName;
     var arrayforMap = [];
     data.Contents.forEach(function(value) {
-      
       if (value.Size === 0) {
         //Gets Name of person from Folder name
         folderName = value.Key.split('+').join(' ').replace(/\/$/, '');
         arrayNames.push(folderName);
       }
       if ( value.Key.includes('Thumb')) {
-        thumbObjs[folderName] = awsget.amazonLink + value.Key;
-        arrayforMap.push(thumbObjs);
+        arrayforMap.push({name: folderName, imageUrl: awsget.amazonLink + value.Key});
       }
     });
     res.status(200);
-    res.send(thumbObjs);
+    res.send(arrayforMap);
   });
 });
 
