@@ -12,7 +12,7 @@ import axios from 'axios';
 class App extends React.Component {
   constructor() {
     super();
-    this.state = { modelBucket: [] };
+    this.state = { modelBucket: ['Loading...'] };
   }
 
   componentWillMount() {
