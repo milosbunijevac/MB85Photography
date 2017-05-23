@@ -36,9 +36,9 @@ class App extends React.Component {
           <div>
             <TopPane />
           </div>
-          <div className="container-fluid text-center">    
+          <div className="container-fluid">    
             <div className="row content">
-              <div className="col-sm-12 text-center"> 
+              <div> 
                 {React.Children.map(this.props.children, child => React.cloneElement(child,
                   { 
                     modelNames: this.state.modelBucket.data,
