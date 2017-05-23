@@ -10,7 +10,7 @@ class ModelCard extends React.Component {
     return (
       <div>
         <img src={this.props.model.imageUrl} />
-        <p> Name: {this.props.model.name}</p>
+        <p className="text-center imageMarginRight"> Name: {this.props.model.name}</p>
       </div>
     );
   }

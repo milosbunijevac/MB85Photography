@@ -37,7 +37,7 @@ class App extends React.Component {
             <TopPane />
           </div>
           <div className="container-fluid">    
-            <div className="row content">
+            <div className="row content imageThumbMargin">
               <div> 
                 {React.Children.map(this.props.children, child => React.cloneElement(child,
                   { 

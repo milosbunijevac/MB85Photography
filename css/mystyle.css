@@ -45,3 +45,11 @@ button.btn.btn-email {
 .imageThumbs img {
   width:200px;
 }
+
+.imageThumbMargin {
+  margin-left: 1px;
+}
+
+.imageMarginRight {
+  margin-right: 15px;
+}
