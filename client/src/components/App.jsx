@@ -1,6 +1,4 @@
 import React from 'react';
-import LeftPane from './LeftPane.jsx';
-import RightPane from './RightPane.jsx';
 import CenterPane from './CenterPane.jsx';
 import TopPane from './TopPane.jsx';
 import Models from './Models.jsx';
