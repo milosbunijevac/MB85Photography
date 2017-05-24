@@ -30,7 +30,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div className="container-fluid">
+        <div className="container-fullwidth">
           <div>
             <TopPane />
           </div>
