@@ -41,29 +41,35 @@ app.post('/modelcall', function(req, res) {
     var folderName;
     var arrayforMap = [];
     var descs = [];
-    var csv;
     data.Contents.forEach(function(value) {
+      var keyspacer;
       if (value.Key.includes('descriptor')) {
         console.log(value.Key, ' this is the value.key');
-        awsget.s3.getObject({ Bucket: 'mbimagestore', Key: value.Key }, function(err, data) {
+        if (value.Key.includes('+')) {
+          keyspacer = value.Key.split('+').join(' ');
+          console.log('the key spacer is :' + keyspacer);
+        } else {
+          keyspacer = value.Key;
+        }
+        awsget.s3.getObject({ Bucket: 'mbimagestore', Key: keyspacer }, function(err, data) {
           if (err) {
             console.log(err, ' this is the error in the getObject');
           }
           console.log(data.Body.toString(), ' this is the data from the getobject');
         });
       }
-      if (value.Size === 0) {
-        //Gets Name of person from Folder name
-        folderName = value.Key.split('+').join(' ').replace(/\/$/, '');
-        arrayNames.push(folderName);
-      }
-      if ( value.Key.includes('Thumb')) {
-        arrayforMap.push({name: folderName, imageUrl: awsget.amazonLink + value.Key});
-      }
+      // if (value.Size === 0) {
+      //   //Gets Name of person from Folder name
+      //   folderName = value.Key.split('+').join(' ').replace(/\/$/, '');
+      //   arrayNames.push(folderName);
+      // }
+      // if ( value.Key.includes('Thumb')) {
+      //   arrayforMap.push({name: folderName, imageUrl: awsget.amazonLink + value.Key});
+      // }
 
     });
     res.status(200);
-    res.send(arrayforMap);
+    // res.send(arrayforMap);
   });
 });
 
