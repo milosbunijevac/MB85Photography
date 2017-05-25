@@ -37,11 +37,18 @@ app.post('/modelcall', function(req, res) {
       console.log(err, null);
     }
     var arrayNames = [];
-    var thumbObjs = {};
     var folderName;
     var arrayforMap = [];
-    var descs;
+    var descriptionArray = [];
     data.Contents.forEach(function(value) {
+      if (value.Size === 0) {
+        //Gets Name of person from Folder name
+        folderName = value.Key.split('+').join(' ').replace(/\/$/, '');
+        arrayNames.push(folderName);
+      }
+      if ( value.Key.includes('Thumb')) {
+        arrayforMap.push({name: folderName, imageUrl: awsget.amazonLink + value.Key});
+      }
       var keyspacer;
       if (value.Key.includes('descriptor')) {
         console.log(value.Key, ' this is the value.key');
@@ -54,18 +61,10 @@ app.post('/modelcall', function(req, res) {
           if (err) {
             console.log(err, ' this is the error in the getObject');
           }
-          descs = data.Body.toString();
+          descriptionArray.push(data.Body.toString());
+          console.log(descriptionArray, 'this is the description inside the getobject');  //So far the only place the descriptions show up are here
         });
       }
-      if (value.Size === 0) {
-        //Gets Name of person from Folder name
-        folderName = value.Key.split('+').join(' ').replace(/\/$/, '');
-        arrayNames.push(folderName);
-      }
-      if ( value.Key.includes('Thumb')) {
-        arrayforMap.push({name: folderName, imageUrl: awsget.amazonLink + value.Key, description: descs});
-      }
-
     });
     res.status(200);
     res.send(arrayforMap);
