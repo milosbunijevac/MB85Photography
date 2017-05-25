@@ -47,7 +47,6 @@ app.post('/modelcall', function(req, res) {
         console.log(value.Key, ' this is the value.key');
         if (value.Key.includes('+')) {
           keyspacer = value.Key.split('+').join(' ');
-          console.log('the key spacer is :' + keyspacer);
         } else {
           keyspacer = value.Key;
         }
