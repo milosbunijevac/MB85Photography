@@ -5,12 +5,13 @@ import Models from './Models.jsx';
 import Projects from './Projects.jsx';
 import Contact from './Contact.jsx';
 import Router from 'react-router';
+
 import axios from 'axios';
 
 class App extends React.Component {
   constructor() {
     super();
-    this.state = { modelBucket: ['Loading...'], description: 'can you see this description?' };
+    this.state = { modelBucket: ['Loading...']};
   }
 
   componentWillMount() {
@@ -41,7 +42,6 @@ class App extends React.Component {
                 {React.Children.map(this.props.children, child => React.cloneElement(child,
                   { 
                     modelNames: this.state.modelBucket.data, 
-                    description: this.state.description,
                     path: this.props.route.path
                   })
                 )}
