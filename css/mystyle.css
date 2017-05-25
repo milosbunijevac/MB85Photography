@@ -59,7 +59,8 @@ button.btn.btn-email {
         display: inline-block;
         float: none;
         vertical-align: top;
-        
+        background-color: transparent;
+        border-color: transparent;
     }
 
     .navbar .navbar-collapse {
