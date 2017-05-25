@@ -10,7 +10,7 @@ import axios from 'axios';
 class App extends React.Component {
   constructor() {
     super();
-    this.state = { modelBucket: ['Loading...'] };
+    this.state = { modelBucket: ['Loading...'], description: 'can you see this description?' };
   }
 
   componentWillMount() {
@@ -40,7 +40,8 @@ class App extends React.Component {
               <div> 
                 {React.Children.map(this.props.children, child => React.cloneElement(child,
                   { 
-                    modelNames: this.state.modelBucket.data,
+                    modelNames: this.state.modelBucket.data, 
+                    description: this.state.description,
                     path: this.props.route.path
                   })
                 )}

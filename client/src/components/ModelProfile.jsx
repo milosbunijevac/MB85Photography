@@ -1,5 +1,8 @@
 import React from 'react';
 
+//load component based on the routh path
+
+
 class ModelProfile extends React.Component {
   constructor(props) {
     super(props);
