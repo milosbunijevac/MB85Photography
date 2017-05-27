@@ -49,22 +49,22 @@ app.post('/modelcall', function(req, res) {
       if ( value.Key.includes('Thumb')) {
         arrayforMap.push({name: folderName, imageUrl: awsget.amazonLink + value.Key});
       }
-      var keyspacer;
-      if (value.Key.includes('descriptor')) {
-        console.log(value.Key, ' this is the value.key');
-        if (value.Key.includes('+')) {
-          keyspacer = value.Key.split('+').join(' ');
-        } else {
-          keyspacer = value.Key;
-        }
-        awsget.s3.getObject({ Bucket: 'mbimagestore', Key: keyspacer }, function(err, data) {
-          if (err) {
-            console.log(err, ' this is the error in the getObject');
-          }
-          descriptionArray.push(data.Body.toString());
-          console.log(descriptionArray, 'this is the description inside the getobject');  //So far the only place the descriptions show up are here
-        });
-      }
+      // var keyspacer;
+      // if (value.Key.includes('descriptor')) {
+      //   console.log(value.Key, ' this is the value.key');
+      //   if (value.Key.includes('+')) {
+      //     keyspacer = value.Key.split('+').join(' ');
+      //   } else {
+      //     keyspacer = value.Key;
+      //   }
+      //   awsget.s3.getObject({ Bucket: 'mbimagestore', Key: keyspacer }, function(err, data) {
+      //     if (err) {
+      //       console.log(err, ' this is the error in the getObject');
+      //     }
+      //     descriptionArray.push(data.Body.toString());
+      //     console.log(descriptionArray, 'this is the description inside the getobject');  //So far the only place the descriptions show up are here
+      //   });
+      // }
     });
     res.status(200);
     res.send(arrayforMap);
