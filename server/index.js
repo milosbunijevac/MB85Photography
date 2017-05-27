@@ -65,6 +65,20 @@ app.post('/modelcall', function(req, res) {
       //     console.log(descriptionArray, 'this is the description inside the getobject');  //So far the only place the descriptions show up are here
       //   });
       // }
+      var keyspacer;
+      if (value.Key.includes('descriptor')) {
+        if (value.Key.includes('+')) {
+          keyspacer = value.Key.split('+').join(' ');
+        } else {
+          keyspacer = value.Key;
+        }
+        awsget.descriptionGetter({ Bucket: 'mbimagestore', Key: keyspacer }, function(err, data2) {
+          if (err) {
+            console.log(err, ' theres an error inside description getter on the server side');
+          } 
+          console.log({name: value.Key, description: data2.Body.toString()});
+        });
+      }
     });
     res.status(200);
     res.send(arrayforMap);
