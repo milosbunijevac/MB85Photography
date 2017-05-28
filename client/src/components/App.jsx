@@ -1,18 +1,17 @@
 import React from 'react';
-import LeftPane from './LeftPane.jsx';
-import RightPane from './RightPane.jsx';
 import CenterPane from './CenterPane.jsx';
 import TopPane from './TopPane.jsx';
 import Models from './Models.jsx';
 import Projects from './Projects.jsx';
 import Contact from './Contact.jsx';
 import Router from 'react-router';
+
 import axios from 'axios';
 
 class App extends React.Component {
   constructor() {
     super();
-    this.state = { modelBucket: [] };
+    this.state = { modelBucket: ['Loading...']};
   }
 
   componentWillMount() {
@@ -32,14 +31,20 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div className="container-fluid">
+        <div className="container-fullwidth">
           <div>
             <TopPane />
           </div>
-          <div className="container-fluid text-center">    
-            <div className="row content">
-              <div className="col-sm-12 text-center"> 
-                {this.props.children}
+
+          <div className="container-fluid">    
+            <div className="row content imageThumbMargin">
+              <div> 
+                {React.Children.map(this.props.children, child => React.cloneElement(child,
+                  { 
+                    modelNames: this.state.modelBucket.data, 
+                    path: this.props.route.path
+                  })
+                )}
               </div>
             </div>
           </div>

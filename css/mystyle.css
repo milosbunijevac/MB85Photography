@@ -1,10 +1,9 @@
-body{
-  background-color: #aea5ba;
-}
-
-/* This is the status bar on the left side of the screen that hasn't been implemented yet. */
-.descriptoBar {
-  background-color: #d7c1cc
+html{
+  background-image: url("WallP.jpg"); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /* This is the text right below the social media icons. It indicates how far off the buttons it is. */
@@ -25,7 +24,6 @@ button.btn.btn-email {
 /* This is the image that displays myself in the about me section on the left side of the screen. */
 .aboutimage {
   width: 90%;
-  margin-left: -45px;
 }
 
 /* This is the model sidebar design */
@@ -40,4 +38,43 @@ button.btn.btn-email {
 .modelnavbar {
   color: lightgray;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.imageThumbs img {
+  width:200px;
+}
+
+.imageThumbMargin {
+  margin-left: 1px;
+}
+
+.imageMarginRight {
+  margin-right: 15px;
+}
+
+/* The color of the navbar and the text-alignment of the links inside of it */
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-inverse {
+      background-color: transparent;
+      border-color: transparent;
+
+    }
+}
+
+/* This is the color of the links in the navbar */
+.navbar-inverse .navbar-nav>li>a {
+  color: wheat;
 }
