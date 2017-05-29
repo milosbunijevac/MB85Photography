@@ -11,7 +11,7 @@ class ModelProfile extends React.Component {
   render() {
     return (
       <div>
-        <p> This is the model profile page. </p>
+        <p> {this.props.test || 'This is the model profile page'} </p>
       </div>
     );
   }

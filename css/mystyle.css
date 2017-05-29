@@ -1,9 +1,9 @@
 html{
   background-image: url("WallP.jpg"); 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+
   background-size: cover;
+  max-width:100%;
+
 }
 
 /* This is the text right below the social media icons. It indicates how far off the buttons it is. */
@@ -74,7 +74,37 @@ button.btn.btn-email {
     }
 }
 
-/* This is the color of the links in the navbar */
+ /*This is the color of the links in the navbar */
 .navbar-inverse .navbar-nav>li>a {
-  color: wheat;
+  color: black;
+}
+
+.navbar-inner {
+  background:transparent;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: transparent !important;
+  /* important used here for demo */
+}
+
+.navbar-inverse {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: transparent !important;
+  border-color: transparent;
+}
+
+.navbar-inverse .navbar-nav>.active>a {
+  background-color:transparent;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+  background-color:transparent;
 }
