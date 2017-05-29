@@ -4,8 +4,6 @@ var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var axios = require('axios');
 var awsget = require('./aws');
-var request = require('request');
-var fs = require('fs');
 
 
 var port = process.env.PORT || 3000;
@@ -37,49 +35,16 @@ app.post('/modelcall', function(req, res) {
       console.log(err, null);
     }
     var arrayNames = [];
-    var folderName;
-    var descriptoname;
-    var descriptostory;
-    var arrayforMap = [];
-    var descriptionArray = [];
     data.Contents.forEach(function(value) {
+      var folderName;
       if (value.Size === 0) {
-        //Gets Name of person from Folder name
         folderName = value.Key.split('+').join(' ').replace(/\/$/, '');
         arrayNames.push(folderName);
       }
-      if ( value.Key.includes('Thumb')) {
-        arrayforMap.push({name: folderName, imageUrl: awsget.amazonLink + value.Key});
-      }
-      var keyspacer;
-      if (value.Key.includes('descriptor')) {
-        if (value.Key.includes('+')) {
-          keyspacer = value.Key.split('+').join(' ');
-        } else {
-          keyspacer = value.Key;
-        }
-        awsget.descriptionGetter({ Bucket: 'mbimagestore', Key: keyspacer }, function(err, data2) {
-          if (err) {
-            console.log(err, ' theres an error inside description getter on the server side');
-          } 
-          folderName = value.Key.split('+').join(' ').replace(/\/$/, '');
-          descriptostory = data2.Body.toString();
-          descriptionArray.push({name: folderName, description: descriptostory});
-          console.log(arrayforMap);
-        });
-        
-      }
-      
     });
-    
-    //arrayforMap exists here
-
+    res.status(200);
+    res.send(arrayNames);
   });
-
-  console.log(descriptionArray);
-  res.status(200);
-  res.send(arrayforMap);
-  
 });
 
 app.listen(port, function() {
