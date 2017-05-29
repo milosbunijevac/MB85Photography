@@ -7,7 +7,6 @@ var awsget = require('./aws');
 var request = require('request');
 var fs = require('fs');
 
-
 var port = process.env.PORT || 3000;
 
 var app = express();
@@ -58,8 +57,6 @@ app.post('/modelcall', function(req, res) {
 
   });
 
-
-  
 });
 
 app.listen(port, function() {
