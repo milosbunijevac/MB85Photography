@@ -44,41 +44,21 @@ app.post('/modelcall', function(req, res) {
     var descriptionArray = [];
     data.Contents.forEach(function(value) {
       if (value.Size === 0) {
-        //Gets Name of person from Folder name
         folderName = value.Key.split('+').join(' ').replace(/\/$/, '');
         arrayNames.push(folderName);
       }
       if ( value.Key.includes('Thumb')) {
         arrayforMap.push({name: folderName, imageUrl: awsget.amazonLink + value.Key});
       }
-      var keyspacer;
-      if (value.Key.includes('descriptor')) {
-        if (value.Key.includes('+')) {
-          keyspacer = value.Key.split('+').join(' ');
-        } else {
-          keyspacer = value.Key;
-        }
-        awsget.descriptionGetter({ Bucket: 'mbimagestore', Key: keyspacer }, function(err, data2) {
-          if (err) {
-            console.log(err, ' theres an error inside description getter on the server side');
-          } 
-          folderName = value.Key.split('+').join(' ').replace(/\/$/, '');
-          descriptostory = data2.Body.toString();
-          descriptionArray.push({name: folderName, description: descriptostory});
-          console.log(arrayforMap);
-        });
-        
-      }
-      
     });
     
     //arrayforMap exists here
+    res.status(200);
+    res.send(arrayforMap);
 
   });
 
-  console.log(descriptionArray);
-  res.status(200);
-  res.send(arrayforMap);
+
   
 });
 
