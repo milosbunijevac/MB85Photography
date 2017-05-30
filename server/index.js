@@ -30,6 +30,11 @@ app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, '../client/src', 'index.html'));
 });
 
+app.post('/aaa', function(req, res) {
+  console.log(req.body);
+  res.send('this is the response from modelindiv');
+});
+
 app.post('/modelcall', function(req, res) {
   awsget.bucketNameLister(awsget.listparams, function(err, data) {
     if (err) {
