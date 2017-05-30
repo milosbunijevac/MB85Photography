@@ -4,7 +4,7 @@ import axios from 'axios';
 class Angelica extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {name: 'Angelica'};
+    this.state = {name: 'Angelica', images: '...Loading'};
   }
 
   componentWillMount() {
@@ -15,6 +15,7 @@ class Angelica extends React.Component {
     })
     .then((response) => {
       console.log('this is the axios call from angelica.jsx (the response) :', response);
+      this.setState({images: response.data});
     })
     .catch((error) => {
       console.log('this is an error from the axios call in angelica.jsx', error);

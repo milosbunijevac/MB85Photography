@@ -35,11 +35,15 @@ app.post('/modelindiv', function(req, res) {
     if (err) {
       console.log(err, null);
     }
+    var name = req.body.model;
+    var arrayindiv = [];
     data.Contents.forEach(function(value) {
       if (value.Size > 200000 && value.Key.includes(req.body.model)) {
-        console.log(value.Key, 'these should hopefully only be pics of the one model');
+        arrayindiv.push({name: req.body.model, imageUrls: 'https://s3-us-west-2.amazonaws.com/mbimagestore/' + value.Key});
       }
     });
+    res.status(200);
+    res.send(arrayindiv);
   });
 });
 
