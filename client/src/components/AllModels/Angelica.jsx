@@ -10,8 +10,8 @@ class Angelica extends React.Component {
   componentWillMount() {
     axios({
       method: 'POST',
-      url: '/aaa',
-      data: {deets: 'Can you see these deets server?'}
+      url: '/modelindiv',
+      data: {model: this.state.name}
     })
     .then((response) => {
       console.log('this is the axios call from angelica.jsx (the response) :', response);

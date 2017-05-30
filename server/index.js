@@ -30,9 +30,17 @@ app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, '../client/src', 'index.html'));
 });
 
-app.post('/aaa', function(req, res) {
-  console.log(req.body);
-  res.send('this is the response from modelindiv');
+app.post('/modelindiv', function(req, res) {
+  awsget.bucketNameLister(awsget.listparams2, function(err, data) {
+    if (err) {
+      console.log(err, null);
+    }
+    data.Contents.forEach(function(value) {
+      if (value.Size > 200000 && value.Key.includes(req.body.model)) {
+        console.log(value.Key, 'these should hopefully only be pics of the one model');
+      }
+    });
+  });
 });
 
 app.post('/modelcall', function(req, res) {
