@@ -7,7 +7,6 @@ var awsget = require('./aws');
 var request = require('request');
 var fs = require('fs');
 
-
 var port = process.env.PORT || 3000;
 
 var app = express();
@@ -31,21 +30,33 @@ app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, '../client/src', 'index.html'));
 });
 
+app.post('/modelindiv', function(req, res) {
+  awsget.bucketNameLister(awsget.listparams2, function(err, data) {
+    if (err) {
+      console.log(err, null);
+    }
+    var name = req.body.model;
+    var arrayindiv = [];
+    data.Contents.forEach(function(value) {
+      if (value.Size > 200000 && value.Key.includes(req.body.model)) {
+        arrayindiv.push({name: req.body.model, imageUrls: 'https://s3-us-west-2.amazonaws.com/mbimagestore/' + value.Key});
+      }
+    });
+    res.status(200);
+    res.send(arrayindiv);
+  });
+});
+
 app.post('/modelcall', function(req, res) {
   awsget.bucketNameLister(awsget.listparams, function(err, data) {
     if (err) {
       console.log(err, null);
     }
-    var arrayNames = [];
     var folderName;
-    var descriptoname;
-    var descriptostory;
     var arrayforMap = [];
-    var descriptionArray = [];
     data.Contents.forEach(function(value) {
       if (value.Size === 0) {
         folderName = value.Key.split('+').join(' ').replace(/\/$/, '');
-        arrayNames.push(folderName);
       }
       if ( value.Key.includes('Thumb')) {
         arrayforMap.push({name: folderName, imageUrl: awsget.amazonLink + value.Key});
@@ -58,8 +69,6 @@ app.post('/modelcall', function(req, res) {
 
   });
 
-
-  
 });
 
 app.listen(port, function() {

@@ -39,7 +39,7 @@ class App extends React.Component {
           <div className="container-fluid">    
             <div className="row content imageThumbMargin">
               <div> 
-                {React.Children.map(this.props.children, child => React.cloneElement(child,
+                {React.Children.map(this.props.children || <CenterPane />, child => React.cloneElement(child,
                   { 
                     modelNames: this.state.modelBucket.data, 
                     path: this.props.route.path
