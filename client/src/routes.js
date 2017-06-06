@@ -12,7 +12,7 @@ import Angelica from './components/AllModels/Angelica.jsx';
 import AnnaIlina from './components/AllModels/AnnaIlina.jsx';
 import AshleySattelmaier from './components/AllModels/AshleySattelmaier.jsx';
 import DeannaDellia from './components/AllModels/DeannaDellia.jsx';
-import Eve from './components/AllModels/Eve.jsx';
+import Evie from './components/AllModels/Evie.jsx';
 import JeanEvelyn from './components/AllModels/JeanEvelyn.jsx';
 import JessicaLari from './components/AllModels/JessicaLari.jsx';
 import JohnaeM from './components/AllModels/JohnaeM.jsx';
@@ -34,7 +34,7 @@ export default (
           <Route path='/Anna Ilina' component={AnnaIlina} />
           <Route path='/Ashley SattelMaier' component={AshleySattelmaier} />
           <Route path='/Deanna Dellia' component={DeannaDellia} />
-          <Route path='/Eve' component={Eve} />
+          <Route path='/Evie' component={Evie} />
           <Route path='/Jean Evelyn' component={JeanEvelyn} />
           <Route path='/Jessica Lari' component={JessicaLari} />
           <Route path='/Johnae M' component={JohnaeM} />

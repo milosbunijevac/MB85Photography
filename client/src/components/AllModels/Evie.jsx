@@ -1,10 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 
-class Eve extends React.Component {
+class Evie extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {name: 'Eve', images: ['...loading']};
+    this.state = {name: 'Evie', images: ['...loading']};
   }
 
   componentWillMount() {
@@ -14,11 +14,11 @@ class Eve extends React.Component {
       data: {model: this.state.name}
     })
     .then((response) => {
-      console.log('this is the axios call from Eve.jsx (the response) :', response);
+      console.log('this is the axios call from Evie.jsx (the response) :', response);
       this.setState({images: response.data});
     })
     .catch((error) => {
-      console.log('this is an error from the axios call in Eve.jsx', error);
+      console.log('this is an error from the axios call in Evie.jsx', error);
     });
   }
 
@@ -39,4 +39,4 @@ class Eve extends React.Component {
   }
 }
 
-export default Eve;
+export default Evie;
