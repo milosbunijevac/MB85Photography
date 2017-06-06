@@ -1,10 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 
-class Angelica extends React.Component {
+class Taylor extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {name: 'Angelica', images: ['...loading']};
+    this.state = {name: 'Taylor', images: ['...loading']};
   }
 
   componentWillMount() {
@@ -14,11 +14,11 @@ class Angelica extends React.Component {
       data: {model: this.state.name}
     })
     .then((response) => {
-      console.log('this is the axios call from angelica.jsx (the response) :', response);
+      console.log('this is the axios call from Taylor.jsx (the response) :', response);
       this.setState({images: response.data});
     })
     .catch((error) => {
-      console.log('this is an error from the axios call in angelica.jsx', error);
+      console.log('this is an error from the axios call in Taylor.jsx', error);
     });
   }
 
@@ -39,4 +39,4 @@ class Angelica extends React.Component {
   }
 }
 
-export default Angelica;
+export default Taylor;
