@@ -23,6 +23,8 @@ import LucieRiviere from './components/AllModels/LucieRiviere.jsx';
 import Nina from './components/AllModels/Nina.jsx';
 import TatianaThompson from './components/AllModels/TatianaThompson.jsx';
 import Taylor from './components/AllModels/Taylor.jsx';
+import Veronica from './components/AllModels/Veronica.jsx';
+import YarynaSkabyk from './components/AllModels/YarynaSkabyk.jsx';
 
 export default (
   <Router history = {browserHistory}>
@@ -43,6 +45,8 @@ export default (
           <Route path='/Nina' component={Nina} />
           <Route path='/Tatiana Thompson' component={TatianaThompson} />
           <Route path='/Taylor' component={Taylor} />
+          <Route path='/Veronica' component={Veronica} />
+          <Route path='/Yaryna Skabyk' component={YarynaSkabyk} />
          <Route path="/projects" component={Projects} />
          <Route path="/contact" component={Contact} />
          <Route path="/about" component={About} />
