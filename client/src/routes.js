@@ -9,6 +9,8 @@ import About from './components/About.jsx';
 import CenterPane from './components/CenterPane.jsx';
 import ModelProfile from './components/ModelProfile.jsx';
 import Angelica from './components/AllModels/Angelica.jsx';
+import AnnaIlina from './components/AllModels/AnnaIlina.jsx';
+import AshleySattelmaier from './components/AllModels/AshleySattelmaier.jsx';
 
 
 export default (
@@ -16,6 +18,8 @@ export default (
       <Route path="/" component={App}>
          <Route path="/models" component={Models} />
           <Route path='/Angelica' component={Angelica} />
+          <Route path='/Anna Ilina' component={AnnaIlina} />
+          <Route path='/Ashley SattelMaier' component={AshleySattelmaier} />
          <Route path="/projects" component={Projects} />
          <Route path="/contact" component={Contact} />
          <Route path="/about" component={About} />

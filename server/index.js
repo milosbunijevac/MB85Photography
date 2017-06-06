@@ -32,6 +32,7 @@ app.get('*', function(req, res) {
 
 app.post('/modelindiv', function(req, res) {
   awsget.bucketNameLister(awsget.listparams2, function(err, data) {
+    console.log(data);
     if (err) {
       console.log(err, null);
     }
