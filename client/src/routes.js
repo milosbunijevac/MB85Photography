@@ -11,6 +11,7 @@ import ModelProfile from './components/ModelProfile.jsx';
 import Angelica from './components/AllModels/Angelica.jsx';
 import AnnaIlina from './components/AllModels/AnnaIlina.jsx';
 import AshleySattelmaier from './components/AllModels/AshleySattelmaier.jsx';
+import DeannaDellia from './components/AllModels/DeannaDellia.jsx';
 
 
 export default (
@@ -20,6 +21,7 @@ export default (
           <Route path='/Angelica' component={Angelica} />
           <Route path='/Anna Ilina' component={AnnaIlina} />
           <Route path='/Ashley SattelMaier' component={AshleySattelmaier} />
+          <Route path='/Deanna Dellia' component={DeannaDellia} />
          <Route path="/projects" component={Projects} />
          <Route path="/contact" component={Contact} />
          <Route path="/about" component={About} />
