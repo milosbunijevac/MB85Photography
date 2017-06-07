@@ -55,12 +55,16 @@ app.post('/modelcall', function(req, res) {
     }
     var folderName;
     var arrayforMap = [];
+    var modelLink;
     data.Contents.forEach(function(value) {
       if (value.Size === 0) {
         folderName = value.Key.split('+').join(' ').replace(/\/$/, '');
       }
+      if (value.Size === 0) {
+        modelLink = value.Key.replace('+', '%20');
+      }
       if ( value.Key.includes('Thumb')) {
-        arrayforMap.push({name: folderName, imageUrl: awsget.amazonLink + value.Key});
+        arrayforMap.push({name: folderName, imageUrl: awsget.amazonLink + value.Key, linkUrl: modelLink});
       }
     });
     
