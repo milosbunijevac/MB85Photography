@@ -31,22 +31,22 @@ export default (
       <Route path="/" component={App}>
          <Route path="/models" component={Models} />
           <Route path='/Angelica' component={Angelica} />
-          <Route path='/Anna Ilina' component={AnnaIlina} />
-          <Route path='/Ashley SattelMaier' component={AshleySattelmaier} />
-          <Route path='/Deanna Dellia' component={DeannaDellia} />
+          <Route path='/Anna%20Ilina' component={AnnaIlina} />
+          <Route path='/Ashley%20SattelMaier' component={AshleySattelmaier} />
+          <Route path='/Deanna%20Dellia' component={DeannaDellia} />
           <Route path='/Evie' component={Evie} />
-          <Route path='/Jean Evelyn' component={JeanEvelyn} />
-          <Route path='/Jessica Lari' component={JessicaLari} />
-          <Route path='/Johnae M' component={JohnaeM} />
-          <Route path='/Katherine Lyness' component={KatherineLyness} />
-          <Route path='/Ladie K' component={LadieK} />
+          <Route path='/Jean%20Evelyn' component={JeanEvelyn} />
+          <Route path='/Jessica%20Lari' component={JessicaLari} />
+          <Route path='/Johnae%20M' component={JohnaeM} />
+          <Route path='/Katherine%20Lyness' component={KatherineLyness} />
+          <Route path='/Ladie%20K' component={LadieK} />
           <Route path='/Lieshia' component={Lieshia} />
-          <Route path='/Lucie Riviere' component={LucieRiviere} />
+          <Route path='/Lucie%20Riviere' component={LucieRiviere} />
           <Route path='/Nina' component={Nina} />
-          <Route path='/Tatiana Thompson' component={TatianaThompson} />
+          <Route path='/Tatiana%20Thompson' component={TatianaThompson} />
           <Route path='/Taylor' component={Taylor} />
           <Route path='/Veronica' component={Veronica} />
-          <Route path='/Yaryna Skabyk' component={YarynaSkabyk} />
+          <Route path='/Yaryna%20Skabyk' component={YarynaSkabyk} />
          <Route path="/projects" component={Projects} />
          <Route path="/contact" component={Contact} />
          <Route path="/about" component={About} />
