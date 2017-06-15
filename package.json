@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./server/index.js --history-api-fallback",
-    "webpackwatch": "webpack --watch"
+    "webpackwatch": "webpack --watch",
+    "postinstall": "webpack"
   },
   "repository": {
     "type": "git",
