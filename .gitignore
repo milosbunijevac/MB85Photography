@@ -2,6 +2,6 @@
 /client/dist/bundle.js
 /client/dist/bundle.js.map
 /font-awesome-4.7.0
-/server/aws.js
+
 yarn.lock
 /db/dbindex.js
