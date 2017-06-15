@@ -32,7 +32,7 @@ export default (
          <Route path="/models" component={Models} />
           <Route path='/Angelica' component={Angelica} />
           <Route path='/Anna%20Ilina' component={AnnaIlina} />
-          <Route path='/Ashley SattelMaier' component={AshleySattelmaier} />
+          <Route path='/Ashley%20SattelMaier' component={AshleySattelmaier} />
           <Route path='/Deanna%20Dellia' component={DeannaDellia} />
           <Route path='/Evie' component={Evie} />
           <Route path='/Jean%20Evelyn' component={JeanEvelyn} />

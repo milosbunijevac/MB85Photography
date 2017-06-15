@@ -11,6 +11,7 @@ class ModelCard extends React.Component {
     return (
       <div>
         <Link to={'/' + this.props.model.linkUrl}><div>
+          {console.log(this.props.model.linkUrl)}
           <img src={this.props.model.imageUrl} />
           <p className="text-center imageMarginRight">{this.props.model.name}</p>
         </div></Link>
