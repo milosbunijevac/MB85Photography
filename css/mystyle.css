@@ -1,9 +1,8 @@
 html{
   background-image: url("WallP.jpg"); 
-
+  background-repeat:no-repeat;
+  background-attachment: fixed;
   background-size: cover;
-  max-width:100%;
-
 }
 
 /* This is the text right below the social media icons. It indicates how far off the buttons it is. */
