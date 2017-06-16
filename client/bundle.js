@@ -16291,6 +16291,7 @@ var ModelCard = function (_React$Component) {
           _react2.default.createElement(
             'div',
             null,
+            console.log(this.props.model.linkUrl),
             _react2.default.createElement('img', { src: this.props.model.imageUrl }),
             _react2.default.createElement(
               'p',
