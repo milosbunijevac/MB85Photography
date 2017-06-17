@@ -13743,6 +13743,10 @@ var _Nina = __webpack_require__(158);
 
 var _Nina2 = _interopRequireDefault(_Nina);
 
+var _Sherman = __webpack_require__(294);
+
+var _Sherman2 = _interopRequireDefault(_Sherman);
+
 var _TatianaThompson = __webpack_require__(159);
 
 var _TatianaThompson2 = _interopRequireDefault(_TatianaThompson);
@@ -13781,6 +13785,7 @@ exports.default = _react2.default.createElement(
     _react2.default.createElement(_reactRouter.Route, { path: '/Lieshia', component: _Lieshia2.default }),
     _react2.default.createElement(_reactRouter.Route, { path: '/Lucie%20Riviere', component: _LucieRiviere2.default }),
     _react2.default.createElement(_reactRouter.Route, { path: '/Nina', component: _Nina2.default }),
+    _react2.default.createElement(_reactRouter.Route, { path: '/Sherman', component: _Sherman2.default }),
     _react2.default.createElement(_reactRouter.Route, { path: '/Tatiana%20Thompson', component: _TatianaThompson2.default }),
     _react2.default.createElement(_reactRouter.Route, { path: '/Taylor', component: _Taylor2.default }),
     _react2.default.createElement(_reactRouter.Route, { path: '/Veronica', component: _Veronica2.default }),
@@ -31544,6 +31549,89 @@ module.exports = function (str) {
 	});
 };
 
+
+/***/ }),
+/* 294 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _axios = __webpack_require__(7);
+
+var _axios2 = _interopRequireDefault(_axios);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Sherman = function (_React$Component) {
+  _inherits(Sherman, _React$Component);
+
+  function Sherman(props) {
+    _classCallCheck(this, Sherman);
+
+    var _this = _possibleConstructorReturn(this, (Sherman.__proto__ || Object.getPrototypeOf(Sherman)).call(this, props));
+
+    _this.state = { name: 'Sherman', images: ['...loading'] };
+    return _this;
+  }
+
+  _createClass(Sherman, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      var _this2 = this;
+
+      (0, _axios2.default)({
+        method: 'POST',
+        url: '/modelindiv',
+        data: { model: this.state.name }
+      }).then(function (response) {
+        console.log('this is the axios call from Sherman.jsx (the response) :', response);
+        _this2.setState({ images: response.data });
+      }).catch(function (error) {
+        console.log('this is an error from the axios call in Sherman.jsx', error);
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        this.state.images.length > 0 ? this.state.images.map(function (photo, i) {
+          return _react2.default.createElement(
+            'div',
+            { key: i, className: 'imageThumbs col-md-2' },
+            _react2.default.createElement(
+              'a',
+              { href: photo.imageUrls },
+              _react2.default.createElement('img', { src: photo.imageUrls })
+            )
+          );
+        }) : console.log('The images are still loading...')
+      );
+    }
+  }]);
+
+  return Sherman;
+}(_react2.default.Component);
+
+exports.default = Sherman;
 
 /***/ })
 /******/ ]);

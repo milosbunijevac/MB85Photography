@@ -21,6 +21,7 @@ import LadieK from './components/AllModels/LadieK.jsx';
 import Lieshia from './components/AllModels/Lieshia.jsx';
 import LucieRiviere from './components/AllModels/LucieRiviere.jsx';
 import Nina from './components/AllModels/Nina.jsx';
+import Sherman from './components/AllModels/Sherman.jsx';
 import TatianaThompson from './components/AllModels/TatianaThompson.jsx';
 import Taylor from './components/AllModels/Taylor.jsx';
 import Veronica from './components/AllModels/Veronica.jsx';
@@ -43,6 +44,7 @@ export default (
           <Route path='/Lieshia' component={Lieshia} />
           <Route path='/Lucie%20Riviere' component={LucieRiviere} />
           <Route path='/Nina' component={Nina} />
+          <Route path='/Sherman' component={Sherman} />
           <Route path='/Tatiana%20Thompson' component={TatianaThompson} />
           <Route path='/Taylor' component={Taylor} />
           <Route path='/Veronica' component={Veronica} />
