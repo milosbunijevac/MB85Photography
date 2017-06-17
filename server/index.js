@@ -7,7 +7,7 @@ var awsget = require('./aws');
 var request = require('request');
 var fs = require('fs');
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 80;
 
 var app = express();
 
