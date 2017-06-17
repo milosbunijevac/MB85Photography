@@ -40,7 +40,8 @@ button.btn.btn-email {
 }
 
 .imageThumbs img {
-  width:200px;
+    width: 200px;
+    height: 159px;
 }
 
 .imageThumbMargin {
@@ -106,4 +107,15 @@ body {
 
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
   background-color:transparent;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+    color: #fff;
+    background-color: silver;
+    color: red;
+    opacity: 0.7;
+}
+
+.imageThumbs.col-md-2 :hover {
+    opacity: 0.8;
 }
