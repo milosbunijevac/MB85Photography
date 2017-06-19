@@ -114,6 +114,7 @@ body {
     background-color: silver;
     color: red;
     opacity: 0.7;
+    border-radius: 10px;
 }
 
 .imageThumbs.col-md-2 :hover {
@@ -124,4 +125,19 @@ body {
   background-color: gainsboro;
   height: 565px;
   border-radius: 2px;
+}
+
+.contactPage {
+  background-color:gainsboro;
+  opacity:0.8;
+}
+
+.modeltextField {
+  background-color: ghostwhite;
+  width: 200px;
+}
+
+.navDesign {
+  background-color: lightgray;
+  border-radius: 10px;
 }

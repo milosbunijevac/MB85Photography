@@ -13,7 +13,7 @@ class ModelCard extends React.Component {
         <Link to={'/' + this.props.model.linkUrl}><div>
           {console.log(this.props.model.linkUrl)}
           <img src={this.props.model.imageUrl} />
-          <p className="text-center imageMarginRight">{this.props.model.name}</p>
+          <p className="text-center imageMarginRight modeltextField">{this.props.model.name}</p>
         </div></Link>
       </div>
     );
