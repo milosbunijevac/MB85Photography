@@ -119,3 +119,9 @@ body {
 .imageThumbs.col-md-2 :hover {
     opacity: 0.8;
 }
+
+.aboutText {
+  background-color: gainsboro;
+  height: 565px;
+  border-radius: 2px;
+}
