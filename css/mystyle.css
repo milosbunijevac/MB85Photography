@@ -98,6 +98,8 @@ button.btn.btn-email {
 .navbar .navbar-nav {
   display: inline-block;
   float: none;
+  font-family: 'Bubbler One', sans-serif;
+  font-size: 26px;
   vertical-align: top;
 }
 
@@ -106,18 +108,37 @@ button.btn.btn-email {
 }
 
 .navbar-inverse .navbar-nav>li>a {
-    color: white;
+    color: black;
 }
 
 .navbar-inverse {
-  border: 0px;
-  background-color: crimson;
+    border: 0px;
+    background-color: ghostwhite;
+    /* color: black; */
 }
 
-.navbar-nav > li > a {
-  /*padding-top:5px !important; 
-  padding-bottom:5px !important;*/
-  }
 .navbar {
   min-height:32px !important
   }
+
+/* Hover color */
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+  color: red;
+  background-color: transparent;
+}
+
+/* Active color */
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+  color: black;
+  background-color: transparent
+}
+
+* {
+  border-radius: 0 !important;
+}
+
+ul.nav.navbar-nav.navbar-left {
+    margin-top: 10px;
+    font-family: 'Abel';
+    font-size: 20px;
+}

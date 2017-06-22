@@ -19,6 +19,9 @@ class TopPane extends React.Component {
               </button>
             </div>
             <div className="collapse navbar-collapse" id="myNavbar">
+              <ul className="nav navbar-nav navbar-left">
+                <li>Milos Bunijevac presents MB85Photography</li>
+              </ul>
               <ul className="nav navbar-nav text-center navDesign">
                 <li className="active"><Link to = {'/'}>Home</Link></li>
                 <li><Link to = {'/models'}> Models</Link></li>

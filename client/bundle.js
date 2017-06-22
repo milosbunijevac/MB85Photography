@@ -16511,6 +16511,15 @@ var TopPane = function (_React$Component) {
               { className: 'collapse navbar-collapse', id: 'myNavbar' },
               _react2.default.createElement(
                 'ul',
+                { className: 'nav navbar-nav navbar-left' },
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  'Milos Bunijevac presents MB85Photography'
+                )
+              ),
+              _react2.default.createElement(
+                'ul',
                 { className: 'nav navbar-nav text-center navDesign' },
                 _react2.default.createElement(
                   'li',
