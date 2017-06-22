@@ -14779,7 +14779,7 @@ var Angelica = function (_React$Component) {
         this.state.images.length > 0 ? this.state.images.map(function (photo, i) {
           return _react2.default.createElement(
             'div',
-            { key: i, className: 'modelThumbs col-md-2' },
+            { key: i, className: 'modelThumbs col-md-3' },
             _react2.default.createElement(
               'a',
               { href: photo.imageUrls },
@@ -14862,7 +14862,7 @@ var AnnaIlina = function (_React$Component) {
         this.state.images.length > 0 ? this.state.images.map(function (photo, i) {
           return _react2.default.createElement(
             'div',
-            { key: i, className: 'modelThumbs col-md-2' },
+            { key: i, className: 'modelThumbs col-md-3' },
             _react2.default.createElement(
               'a',
               { href: photo.imageUrls },
@@ -14945,7 +14945,7 @@ var AshleySattelmaier = function (_React$Component) {
         this.state.images.length > 0 ? this.state.images.map(function (photo, i) {
           return _react2.default.createElement(
             'div',
-            { key: i, className: 'modelThumbs col-md-2' },
+            { key: i, className: 'modelThumbs col-md-3' },
             _react2.default.createElement(
               'a',
               { href: photo.imageUrls },
@@ -15111,7 +15111,7 @@ var Evie = function (_React$Component) {
         this.state.images.length > 0 ? this.state.images.map(function (photo, i) {
           return _react2.default.createElement(
             'div',
-            { key: i, className: 'modelThumbs col-md-2' },
+            { key: i, className: 'modelThumbs col-md-3' },
             _react2.default.createElement(
               'a',
               { href: photo.imageUrls },
@@ -15194,7 +15194,7 @@ var JeanEvelyn = function (_React$Component) {
         this.state.images.length > 0 ? this.state.images.map(function (photo, i) {
           return _react2.default.createElement(
             'div',
-            { key: i, className: 'modelThumbs col-md-2' },
+            { key: i, className: 'modelThumbs col-md-3' },
             _react2.default.createElement(
               'a',
               { href: photo.imageUrls },
@@ -15277,7 +15277,7 @@ var JessicaLari = function (_React$Component) {
         this.state.images.length > 0 ? this.state.images.map(function (photo, i) {
           return _react2.default.createElement(
             'div',
-            { key: i, className: 'modelThumbs col-md-2' },
+            { key: i, className: 'modelThumbs col-md-3' },
             _react2.default.createElement(
               'a',
               { href: photo.imageUrls },
@@ -15360,7 +15360,7 @@ var JohnaeM = function (_React$Component) {
         this.state.images.length > 0 ? this.state.images.map(function (photo, i) {
           return _react2.default.createElement(
             'div',
-            { key: i, className: 'modelThumbs col-md-2' },
+            { key: i, className: 'modelThumbs col-md-3' },
             _react2.default.createElement(
               'a',
               { href: photo.imageUrls },
@@ -15443,7 +15443,7 @@ var KatherineLyness = function (_React$Component) {
         this.state.images.length > 0 ? this.state.images.map(function (photo, i) {
           return _react2.default.createElement(
             'div',
-            { key: i, className: 'modelThumbs col-md-2' },
+            { key: i, className: 'modelThumbs col-md-3' },
             _react2.default.createElement(
               'a',
               { href: photo.imageUrls },
@@ -15526,7 +15526,7 @@ var LadieK = function (_React$Component) {
         this.state.images.length > 0 ? this.state.images.map(function (photo, i) {
           return _react2.default.createElement(
             'div',
-            { key: i, className: 'modelThumbs col-md-2' },
+            { key: i, className: 'modelThumbs col-md-3' },
             _react2.default.createElement(
               'a',
               { href: photo.imageUrls },
@@ -15609,7 +15609,7 @@ var Lieshia = function (_React$Component) {
         this.state.images.length > 0 ? this.state.images.map(function (photo, i) {
           return _react2.default.createElement(
             'div',
-            { key: i, className: 'modelThumbs col-md-2' },
+            { key: i, className: 'modelThumbs col-md-3' },
             _react2.default.createElement(
               'a',
               { href: photo.imageUrls },
@@ -15692,7 +15692,7 @@ var LucieRiviere = function (_React$Component) {
         this.state.images.length > 0 ? this.state.images.map(function (photo, i) {
           return _react2.default.createElement(
             'div',
-            { key: i, className: 'modelThumbs col-md-2' },
+            { key: i, className: 'modelThumbs col-md-3' },
             _react2.default.createElement(
               'a',
               { href: photo.imageUrls },
@@ -15775,7 +15775,7 @@ var Nina = function (_React$Component) {
         this.state.images.length > 0 ? this.state.images.map(function (photo, i) {
           return _react2.default.createElement(
             'div',
-            { key: i, className: 'modelThumbs col-md-2' },
+            { key: i, className: 'modelThumbs col-md-3' },
             _react2.default.createElement(
               'a',
               { href: photo.imageUrls },
@@ -15858,7 +15858,7 @@ var Sherman = function (_React$Component) {
         this.state.images.length > 0 ? this.state.images.map(function (photo, i) {
           return _react2.default.createElement(
             'div',
-            { key: i, className: 'modelThumbs col-md-2' },
+            { key: i, className: 'modelThumbs col-md-3' },
             _react2.default.createElement(
               'a',
               { href: photo.imageUrls },
