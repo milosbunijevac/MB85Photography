@@ -11,7 +11,6 @@ class Models extends React.Component {
   render() {
     return (
       <div>
-        <p className = "text-center">Models Page</p>
         {this.props.modelNames.map((model, i) => {
           return (
             <div key={i} className = "imageThumbs col-md-2">

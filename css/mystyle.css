@@ -5,6 +5,15 @@ html{
   background-size: cover;
 }
 
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: transparent !important;
+  /* important used here for demo */
+}
+
 /* This is the text right below the social media icons. It indicates how far off the buttons it is. */
 .socialdesc {
   margin-top: 60px;
@@ -33,15 +42,9 @@ button.btn.btn-email {
   max-width: 170px;
 }
 
-/* This is the navbar text on the model page on the left side */
-.modelnavbar {
-  color: lightgray;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
 .imageThumbs img {
-    width: 200px;
-    height: 159px;
+  width: 200px;
+  height: 159px;
 }
 
 .modelThumbs img{
@@ -63,7 +66,6 @@ button.btn.btn-email {
   margin-right: 15px;
 }
 
-
 @media (min-width: 992px){
   .col-md-3 {
       width: 25%;
@@ -71,78 +73,16 @@ button.btn.btn-email {
       margin-right: -226px;
   }
 }
-/* The color of the navbar and the text-alignment of the links inside of it */
-
-@media (min-width: 768px) {
-    .navbar .navbar-nav {
-        display: inline-block;
-        float: none;
-        vertical-align: top;
-        border-color: transparent;
-    }
-
-    .navbar .navbar-collapse {
-        text-align: center;
-    }
-
-    .navbar-inverse {
-      background-color: transparent;
-      border-color: transparent;
-
-    }
-}
-
- /*This is the color of the links in the navbar */
-.navbar-inverse .navbar-nav>li>a {
-  color: black;
-}
-
-.navbar-inner {
-  background:transparent;
-}
-
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #333;
-  background-color: transparent !important;
-  /* important used here for demo */
-}
-
-.navbar-inverse {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #333;
-  background-color: transparent !important;
-  border-color: transparent;
-}
-
-.navbar-inverse .navbar-nav>.active>a {
-  background-color:transparent;
-}
-
-.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
-  background-color:transparent;
-}
-
-.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
-    color: #fff;
-    background-color: silver;
-    color: red;
-    opacity: 0.7;
-    border-radius: 10px;
-}
 
 .imageThumbs.col-md-2 :hover {
     opacity: 0.8;
 }
 
 .aboutText {
-  background-color: gainsboro;
-  height: 565px;
-  border-radius: 2px;
+    height: 565px;
+    border-radius: 2px;
+    background-color: brown;
+    color: whitesmoke;
 }
 
 .contactPage {
@@ -155,7 +95,29 @@ body {
   width: 200px;
 }
 
-.navDesign {
-  background-color: lightgray;
-  border-radius: 10px;
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
 }
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: white;
+}
+
+.navbar-inverse {
+  border: 0px;
+  background-color: crimson;
+}
+
+.navbar-nav > li > a {
+  /*padding-top:5px !important; 
+  padding-bottom:5px !important;*/
+  }
+.navbar {
+  min-height:32px !important
+  }

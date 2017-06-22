@@ -9100,11 +9100,7 @@ var CenterPane = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement(
-          'h1',
-          null,
-          'Welcome'
-        )
+        _react2.default.createElement('h1', null)
       );
     }
   }, {
@@ -9270,11 +9266,6 @@ var Models = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement(
-          'p',
-          { className: 'text-center' },
-          'Models Page'
-        ),
         this.props.modelNames.map(function (model, i) {
           return _react2.default.createElement(
             'div',
