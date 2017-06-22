@@ -27,7 +27,7 @@ class YarynaSkabyk extends React.Component {
       <div>
         {(this.state.images.length > 0) ? this.state.images.map((photo, i) => {
           return (
-            <div key={i} className="imageThumbs col-md-2">
+            <div key={i} className="modelThumbs col-md-2">
               <a href={photo.imageUrls}>
                 <img src={photo.imageUrls}/>
               </a>

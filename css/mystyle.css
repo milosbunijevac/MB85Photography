@@ -44,14 +44,33 @@ button.btn.btn-email {
     height: 159px;
 }
 
-.imageThumbMargin {
+.modelThumbs img{
+  width:250px;
+}
+
+.modelThumbMargin {
   margin-left: 1px;
+  margin-top: 20px;
+}
+
+.imageThumbMargin {
+    margin-left: 110px;
+    margin-top: 20px;
+    margin-right: -50px;
 }
 
 .imageMarginRight {
   margin-right: 15px;
 }
 
+
+@media (min-width: 992px){
+  .col-md-3 {
+      width: 25%;
+      margin-left: 100px;
+      margin-right: -226px;
+  }
+}
 /* The color of the navbar and the text-alignment of the links inside of it */
 
 @media (min-width: 768px) {

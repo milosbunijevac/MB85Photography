@@ -11,7 +11,7 @@ import axios from 'axios';
 class App extends React.Component {
   constructor() {
     super();
-    this.state = { modelBucket: ['Loading...']};
+    this.state = { modelBucket: {data: ['Loading']}};
   }
 
   componentWillMount() {
@@ -37,7 +37,7 @@ class App extends React.Component {
           </div>
 
           <div className="container-fluid">    
-            <div className="row content imageThumbMargin">
+            <div className="row content modelThumbMargin">
               <div> 
                 {React.Children.map(this.props.children || <CenterPane />, child => React.cloneElement(child,
                   { 
