@@ -33,7 +33,6 @@ app.get('*', function(req, res) {
 
 app.post('/modelindiv', function(req, res) {
   awsget.bucketNameLister(awsget.listparams2).then((fromResolve) => {
-    console.log('this is the data inside from resolve: ', fromResolve);
     var name = req.body.model;
     var arrayindiv = [];
     fromResolve.Contents.forEach(function(value) {
@@ -50,7 +49,6 @@ app.post('/modelindiv', function(req, res) {
 
 app.post('/modelcall', function(req, res) {
   awsget.bucketNameLister(awsget.listparams).then((fromResolve) => {
-    console.log('this is the data inside from resolve in bucketnamelister: ', fromResolve);
     var folderName;
     var arrayforMap = [];
     var modelLink;
