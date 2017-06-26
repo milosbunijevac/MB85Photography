@@ -2,6 +2,7 @@ var AWS = require('aws-sdk');
 var AWS = require('aws-sdk/global');
 var S3 = require('aws-sdk/clients/s3');
 var https = require('https');
+var Promise = require("bluebird");
 var agent = new https.Agent({
   maxSockets: 25
 });
@@ -34,24 +35,28 @@ var listparams2 = {
   EncodingType: 'url'
 };
 
-let bucketNameLister = function(parameters, callback) {
-  s3.listObjects(parameters, function(err, data) {
-    if (err) {
-      callback(err, null);
-    } else {
-      callback(null, data);
-    }
-  });
+let bucketNameLister = function(parameters) {
+  return new Promise(function (resolve, reject) {
+    s3.listObjects(parameters, function(err, data) {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    });
+  })
 };
 
-let descriptionGetter = function(parameters, callback) {
-  s3.getObject(parameters, function(err, data) {
-    if (err) {
-      callback(err, null);
-    } else {
-      callback(null, data);
-    }
-  });
+let descriptionGetter = function(parameters) {
+  return new Promise(function (resolve, reject) {
+    s3.getObject(parameters, function(err, data) {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    });
+  })
 };
 
 module.exports.s3 = s3;
