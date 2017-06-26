@@ -32,32 +32,29 @@ app.get('*', function(req, res) {
 });
 
 app.post('/modelindiv', function(req, res) {
-  awsget.bucketNameLister(awsget.listparams2, function(err, data) {
-    console.log(data);
-    if (err) {
-      console.log(err, null);
-    }
+  awsget.bucketNameLister(awsget.listparams2).then((fromResolve) => {
+    console.log('this is the data inside from resolve: ', fromResolve);
     var name = req.body.model;
     var arrayindiv = [];
-    data.Contents.forEach(function(value) {
+    fromResolve.Contents.forEach(function(value) {
       if (value.Size > 200000 && value.Key.includes(req.body.model)) {
         arrayindiv.push({name: req.body.model, imageUrls: 'https://s3-us-west-2.amazonaws.com/mbimagestore/' + value.Key});
       }
     });
     res.status(200);
     res.send(arrayindiv);
-  });
+  }).catch((fromReject) => {
+      console.log(fromReject);
+  })
 });
 
 app.post('/modelcall', function(req, res) {
-  awsget.bucketNameLister(awsget.listparams, function(err, data) {
-    if (err) {
-      console.log(err, null);
-    }
+  awsget.bucketNameLister(awsget.listparams).then((fromResolve) => {
+    console.log('this is the data inside from resolve in bucketnamelister: ', fromResolve);
     var folderName;
     var arrayforMap = [];
     var modelLink;
-    data.Contents.forEach(function(value) {
+    fromResolve.Contents.forEach(function(value) {
       if (value.Size === 0) {
         folderName = value.Key.split('+').join(' ').replace(/\/$/, '');
       }
@@ -68,12 +65,11 @@ app.post('/modelcall', function(req, res) {
         arrayforMap.push({name: folderName, imageUrl: awsget.amazonLink + value.Key, linkUrl: modelLink});
       }
     });
-    
-    //arrayforMap exists here
     res.status(200);
     res.send(arrayforMap);
-
-  });
+  }).catch((fromReject) => {
+    console.log(fromReject);
+  })
 
 });
 
