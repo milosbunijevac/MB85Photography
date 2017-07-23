@@ -1,4 +1,5 @@
 import React from 'react';
+import About from './About.jsx';
 import CenterPane from './CenterPane.jsx';
 import TopPane from './TopPane.jsx';
 import Models from './Models.jsx';
@@ -43,6 +44,9 @@ class App extends React.Component {
           <Switch>
             <Route exact path='/' component={FrontPage} />
             <Route path='/models' component={Models} />
+            <Route path='/projects' component={Projects} />
+            <Route path='/contact' component={Contact} />
+            <Route path='/about' component={About} />
           </Switch>
         </div>
       </div>

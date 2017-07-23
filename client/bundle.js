@@ -13716,6 +13716,10 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _About = __webpack_require__(109);
+
+var _About2 = _interopRequireDefault(_About);
+
 var _CenterPane = __webpack_require__(63);
 
 var _CenterPane2 = _interopRequireDefault(_CenterPane);
@@ -13805,7 +13809,10 @@ var App = function (_React$Component) {
             _reactRouter.Switch,
             null,
             _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _FrontPage2.default }),
-            _react2.default.createElement(_reactRouterDom.Route, { path: '/models', component: _Models2.default })
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/models', component: _Models2.default }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/projects', component: _Projects2.default }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/contact', component: _Contact2.default }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _About2.default })
           )
         )
       );
