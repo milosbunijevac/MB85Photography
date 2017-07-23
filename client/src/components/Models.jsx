@@ -11,7 +11,7 @@ class Models extends React.Component {
   render() {
     return (
       <div>
-        MODELS PAGE
+        ModelPage
         {/* {this.props.modelNames.map((model, i) => {
           return (
             <div key={i} className = "imageThumbs col-md-2">

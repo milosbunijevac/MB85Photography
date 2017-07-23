@@ -4,6 +4,7 @@ import TopPane from './TopPane.jsx';
 import Models from './Models.jsx';
 import Projects from './Projects.jsx';
 import Contact from './Contact.jsx';
+import FrontPage from './FrontPage.jsx';
 import {Switch} from 'react-router';
 import {Route} from 'react-router-dom';
 
@@ -37,8 +38,10 @@ class App extends React.Component {
             <TopPane />
           </div>
         </div>
+
         <div className="container">
           <Switch>
+            <Route exact path='/' component={FrontPage} />
             <Route path='/models' component={Models} />
           </Switch>
         </div>

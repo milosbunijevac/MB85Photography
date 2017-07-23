@@ -1,9 +1,9 @@
-html {
+/* html {
     background-image: url("WallP.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-}
+} */
 
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -12,6 +12,18 @@ body {
     color: #333;
     background-color: transparent !important;
     /* important used here for demo */
+}
+
+.container {
+    min-height: 100vh;
+}
+
+.modelFront {
+    background-image: url(WallP.jpg);
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: contain;
+    min-height: 1024px;
 }
 
 
@@ -161,5 +173,19 @@ ul.nav.navbar-nav.navbar-left {
 }
 
 ul.nav.navbar-nav.text-center.navDesign {
-    margin-right: 15%;
+    margin-left: -9%;
+    margin-right: 6%;
+}
+
+nav.navbar.navbar-inverse {
+    margin-bottom: 0px;
+}
+
+div#app {
+    background-color: ghostwhite;
+}
+
+.mainpageText {
+    font-family: 'Bubbler One', sans-serif;
+    text-align: center;
 }
