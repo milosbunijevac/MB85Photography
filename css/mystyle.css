@@ -1,59 +1,69 @@
-html{
-  background-image: url("WallP.jpg"); 
-  background-repeat:no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+html {
+    background-image: url("WallP.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #333;
-  background-color: transparent !important;
-  /* important used here for demo */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: transparent !important;
+    /* important used here for demo */
 }
+
 
 /* This is the text right below the social media icons. It indicates how far off the buttons it is. */
+
 .socialdesc {
-  margin-top: 60px;
+    margin-top: 60px;
 }
+
 
 /*This is how far apart the social media icon buttons are.*/
-a.btn.btn-social-icon.btn-lg { 
-  margin-right: 10px;
+
+a.btn.btn-social-icon.btn-lg {
+    margin-right: 10px;
 }
+
 
 /* Custom sizing of the email button in the contact me section */
+
 button.btn.btn-email {
-  padding: 5px 16px;
+    padding: 5px 16px;
 }
+
 
 /* This is the image that displays myself in the about me section on the left side of the screen. */
+
 .aboutimage {
-  width: 90%;
+    width: 90%;
 }
 
+
 /* This is the model sidebar design */
+
 .modelbar {
-  padding-left: 18px;
-  padding-top: 10px;
-  min-height: 600px;
-  max-width: 170px;
+    padding-left: 18px;
+    padding-top: 10px;
+    min-height: 600px;
+    max-width: 170px;
 }
 
 .imageThumbs img {
-  width: 200px;
-  height: 159px;
+    width: 200px;
+    height: 159px;
 }
 
-.modelThumbs img{
-  width:250px;
+.modelThumbs img {
+    width: 250px;
 }
 
 .modelThumbMargin {
-  margin-left: 1px;
-  margin-top: 20px;
+    margin-left: 1px;
+    margin-top: 20px;
 }
 
 .imageThumbMargin {
@@ -63,15 +73,15 @@ button.btn.btn-email {
 }
 
 .imageMarginRight {
-  margin-right: 15px;
+    margin-right: 15px;
 }
 
-@media (min-width: 992px){
-  .col-md-3 {
-      width: 25%;
-      margin-left: 100px;
-      margin-right: -226px;
-  }
+@media (min-width: 992px) {
+    .col-md-3 {
+        width: 25%;
+        margin-left: 100px;
+        margin-right: -226px;
+    }
 }
 
 .imageThumbs.col-md-2 :hover {
@@ -86,25 +96,25 @@ button.btn.btn-email {
 }
 
 .contactPage {
-  background-color:gainsboro;
-  opacity:0.8;
+    background-color: gainsboro;
+    opacity: 0.8;
 }
 
 .modeltextField {
-  background-color: ghostwhite;
-  width: 200px;
+    background-color: ghostwhite;
+    width: 200px;
 }
 
 .navbar .navbar-nav {
-  display: inline-block;
-  float: none;
-  font-family: 'Bubbler One', sans-serif;
-  font-size: 26px;
-  vertical-align: top;
+    display: inline-block;
+    float: none;
+    font-family: 'Bubbler One', sans-serif;
+    font-size: 26px;
+    vertical-align: top;
 }
 
 .navbar .navbar-collapse {
-  text-align: center;
+    text-align: center;
 }
 
 .navbar-inverse .navbar-nav>li>a {
@@ -118,27 +128,38 @@ button.btn.btn-email {
 }
 
 .navbar {
-  min-height:32px !important
-  }
-
-/* Hover color */
-.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
-  color: red;
-  background-color: transparent;
+    min-height: 32px !important
 }
 
+
+/* Hover color */
+
+.navbar-inverse .navbar-nav>li>a:focus,
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: red;
+    background-color: transparent;
+}
+
+
 /* Active color */
-.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
-  color: black;
-  background-color: transparent
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover {
+    color: black;
+    background-color: transparent
 }
 
 * {
-  border-radius: 0 !important;
+    border-radius: 0 !important;
 }
 
 ul.nav.navbar-nav.navbar-left {
     margin-top: 10px;
     font-family: 'Abel';
     font-size: 20px;
+}
+
+ul.nav.navbar-nav.text-center.navDesign {
+    margin-right: 15%;
 }

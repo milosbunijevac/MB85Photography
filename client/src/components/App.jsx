@@ -4,7 +4,8 @@ import TopPane from './TopPane.jsx';
 import Models from './Models.jsx';
 import Projects from './Projects.jsx';
 import Contact from './Contact.jsx';
-import Router from 'react-router';
+import {Switch} from 'react-router';
+import {Route} from 'react-router-dom';
 
 import axios from 'axios';
 
@@ -35,19 +36,11 @@ class App extends React.Component {
           <div>
             <TopPane />
           </div>
-
-          <div className="container-fluid">    
-            <div className="row content modelThumbMargin">
-              <div> 
-                {React.Children.map(this.props.children || <CenterPane />, child => React.cloneElement(child,
-                  { 
-                    modelNames: this.state.modelBucket.data, 
-                    path: this.props.route.path
-                  })
-                )}
-              </div>
-            </div>
-          </div>
+        </div>
+        <div className="container">
+          <Switch>
+            <Route path='/models' component={Models} />
+          </Switch>
         </div>
       </div>
     );
