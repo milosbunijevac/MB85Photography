@@ -1,59 +1,92 @@
-html{
-  background-image: url("WallP.jpg"); 
-  background-repeat:no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
+/* html {
+    background-image: url("WallP.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+} */
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #333;
-  background-color: transparent !important;
-  /* important used here for demo */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: transparent !important;
+    /* important used here for demo */
 }
+
+.container {
+    min-height: 100vh;
+}
+
+.modelFront {
+    background-image: url(WallP.jpg);
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: contain;
+    min-height: 1024px;
+}
+
 
 /* This is the text right below the social media icons. It indicates how far off the buttons it is. */
+
 .socialdesc {
-  margin-top: 60px;
+    margin-top: 60px;
 }
+
 
 /*This is how far apart the social media icon buttons are.*/
-a.btn.btn-social-icon.btn-lg { 
-  margin-right: 10px;
+
+a.btn.btn-social-icon.btn-lg {
+    margin-right: 10px;
 }
+
 
 /* Custom sizing of the email button in the contact me section */
+
 button.btn.btn-email {
-  padding: 5px 16px;
+    padding: 5px 16px;
 }
+
 
 /* This is the image that displays myself in the about me section on the left side of the screen. */
+
 .aboutimage {
-  width: 90%;
+    width: 90%;
 }
 
+
 /* This is the model sidebar design */
+
 .modelbar {
-  padding-left: 18px;
-  padding-top: 10px;
-  min-height: 600px;
-  max-width: 170px;
+    padding-left: 18px;
+    padding-top: 10px;
+    min-height: 600px;
+    max-width: 170px;
 }
 
 .imageThumbs img {
-  width: 200px;
-  height: 159px;
+    max-width: 100%;
 }
 
-.modelThumbs img{
-  width:250px;
+.col-md-4.imageThumbs {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.col-md-4.imageThumbs:hover {
+    padding-left: 0px;
+    padding-right: 0px;
+    opacity: 0.6;
+    transition-duration: 0.7s;
+}
+
+.modelThumbs img {
+    width: 250px;
 }
 
 .modelThumbMargin {
-  margin-left: 1px;
-  margin-top: 20px;
+    margin-left: 1px;
+    margin-top: 20px;
 }
 
 .imageThumbMargin {
@@ -63,48 +96,41 @@ button.btn.btn-email {
 }
 
 .imageMarginRight {
-  margin-right: 15px;
+    margin-right: 15px;
 }
 
-@media (min-width: 992px){
-  .col-md-3 {
-      width: 25%;
-      margin-left: 100px;
-      margin-right: -226px;
-  }
+@media (min-width: 992px) {
+    .col-md-3 {
+        width: 25%;
+        margin-left: 100px;
+        margin-right: -226px;
+    }
 }
 
 .imageThumbs.col-md-2 :hover {
     opacity: 0.8;
 }
 
-.aboutText {
-    height: 565px;
-    border-radius: 2px;
-    background-color: brown;
-    color: whitesmoke;
-}
-
 .contactPage {
-  background-color:gainsboro;
-  opacity:0.8;
+    background-color: white;
+    opacity: 0.8;
 }
 
 .modeltextField {
-  background-color: ghostwhite;
-  width: 200px;
+    background-color: ghostwhite;
+    width: 200px;
 }
 
 .navbar .navbar-nav {
-  display: inline-block;
-  float: none;
-  font-family: 'Bubbler One', sans-serif;
-  font-size: 26px;
-  vertical-align: top;
+    display: inline-block;
+    float: none;
+    font-family: 'Bubbler One', sans-serif;
+    font-size: 26px;
+    vertical-align: top;
 }
 
 .navbar .navbar-collapse {
-  text-align: center;
+    text-align: center;
 }
 
 .navbar-inverse .navbar-nav>li>a {
@@ -118,27 +144,97 @@ button.btn.btn-email {
 }
 
 .navbar {
-  min-height:32px !important
-  }
-
-/* Hover color */
-.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
-  color: red;
-  background-color: transparent;
+    min-height: 32px !important
 }
 
+
+/* Hover color */
+
+.navbar-inverse .navbar-nav>li>a:focus,
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: red;
+    background-color: transparent;
+}
+
+
 /* Active color */
-.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
-  color: black;
-  background-color: transparent
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover {
+    color: black;
+    background-color: transparent
 }
 
 * {
-  border-radius: 0 !important;
+    border-radius: 0 !important;
 }
 
 ul.nav.navbar-nav.navbar-left {
     margin-top: 10px;
     font-family: 'Abel';
     font-size: 20px;
+}
+
+ul.nav.navbar-nav.text-center.navDesign {
+    margin-left: -9%;
+    margin-right: 6%;
+}
+
+nav.navbar.navbar-inverse {
+    margin-bottom: 0px;
+}
+
+div#app {
+    background-color: ghostwhite;
+}
+
+.mainpageText {
+    font-family: 'Bubbler One', sans-serif;
+    text-align: center;
+}
+
+h4.hoverTextModel:hover {
+    position: absolute;
+    margin-left: 15px;
+    left: 40%;
+    top: 37%;
+    text-align: center;
+    color: white;
+    opacity: 1;
+}
+
+h4.hoverTextModel {
+    position: absolute;
+    margin-left: 15px;
+    left: 40%;
+    top: 37%;
+    text-align: center;
+    color: white;
+    opacity: 0;
+}
+
+.projectTitle {
+    text-align: center;
+}
+
+.comingSoon {
+    text-align: center;
+}
+
+.col-md-8>.aboutText {
+    color: black;
+}
+
+img.modelPrevPic {
+    max-width: 300px;
+}
+
+.row.modelPhotos {
+    margin-top: 20px;
+}
+
+h2.row.modelName {
+    font-family: 'Bubbler One', sans-serif;
+    font-weight: bold;
 }

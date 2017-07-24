@@ -34,10 +34,11 @@ app.get('*', function(req, res) {
 app.post('/modelindiv', function(req, res) {
   awsget.bucketNameLister(awsget.listparams2).then((fromResolve) => {
     var name = req.body.model;
+    var replaced = name.replace(/ /g, '+');
     var arrayindiv = [];
     fromResolve.Contents.forEach(function(value) {
-      if (value.Size > 200000 && value.Key.includes(req.body.model)) {
-        arrayindiv.push({name: req.body.model, imageUrls: 'https://s3-us-west-2.amazonaws.com/mbimagestore/' + value.Key});
+      if (value.Size > 200000 && value.Key.includes(replaced)) {
+        arrayindiv.push({name: replaced, imageUrls: 'https://s3-us-west-2.amazonaws.com/mbimagestore/' + value.Key});
       }
     });
     res.status(200);

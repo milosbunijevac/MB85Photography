@@ -1,10 +1,14 @@
 import React from 'react';
+import About from './About.jsx';
 import CenterPane from './CenterPane.jsx';
 import TopPane from './TopPane.jsx';
 import Models from './Models.jsx';
 import Projects from './Projects.jsx';
 import Contact from './Contact.jsx';
-import Router from 'react-router';
+import FrontPage from './FrontPage.jsx';
+import ModelProfile from './ModelProfile.jsx';
+import {Switch} from 'react-router';
+import {Route} from 'react-router-dom';
 
 import axios from 'axios';
 
@@ -14,20 +18,6 @@ class App extends React.Component {
     this.state = { modelBucket: {data: ['Loading']}};
   }
 
-  componentWillMount() {
-    axios({
-      method: 'POST',
-      url: '/modelcall'
-    })
-      .then((response) => {
-        console.log('this is the axios call from models.jsx (the response) :', response);
-        this.setState({modelBucket: response});
-      })
-      .catch((error) => {
-        console.log('this is an error from the axios call in models.jsx', error);
-      });
-  }
-
   render() {
     return (
       <div>
@@ -35,19 +25,17 @@ class App extends React.Component {
           <div>
             <TopPane />
           </div>
+        </div>
 
-          <div className="container-fluid">    
-            <div className="row content modelThumbMargin">
-              <div> 
-                {React.Children.map(this.props.children || <CenterPane />, child => React.cloneElement(child,
-                  { 
-                    modelNames: this.state.modelBucket.data, 
-                    path: this.props.route.path
-                  })
-                )}
-              </div>
-            </div>
-          </div>
+        <div className="container">
+          <Switch>
+            <Route exact path='/' component={FrontPage} />
+            <Route exact path='/models' component={Models} />
+            <Route path='/projects' component={Projects} />
+            <Route path='/contact' component={Contact} />
+            <Route path='/about' component={About} />
+            <Route path='/models/:name' component={ModelProfile} />
+          </Switch>
         </div>
       </div>
     );
