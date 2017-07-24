@@ -6,6 +6,7 @@ import Models from './Models.jsx';
 import Projects from './Projects.jsx';
 import Contact from './Contact.jsx';
 import FrontPage from './FrontPage.jsx';
+import ModelProfile from './ModelProfile.jsx';
 import {Switch} from 'react-router';
 import {Route} from 'react-router-dom';
 
@@ -29,10 +30,11 @@ class App extends React.Component {
         <div className="container">
           <Switch>
             <Route exact path='/' component={FrontPage} />
-            <Route path='/models' component={Models} />
+            <Route exact path='/models' component={Models} />
             <Route path='/projects' component={Projects} />
             <Route path='/contact' component={Contact} />
             <Route path='/about' component={About} />
+            <Route path='/models/:name' component={ModelProfile} />
           </Switch>
         </div>
       </div>

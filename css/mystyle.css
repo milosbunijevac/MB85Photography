@@ -225,3 +225,11 @@ h4.hoverTextModel {
 .col-md-8>.aboutText {
     color: black;
 }
+
+img.modelPrevPic {
+    max-width: 300px;
+}
+
+.row.modelPhotos {
+    margin-top: 20px;
+}

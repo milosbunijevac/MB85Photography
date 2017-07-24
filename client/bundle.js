@@ -7830,6 +7830,14 @@ var _axios = __webpack_require__(6);
 
 var _axios2 = _interopRequireDefault(_axios);
 
+var _ModelProfile = __webpack_require__(129);
+
+var _ModelProfile2 = _interopRequireDefault(_ModelProfile);
+
+var _reactRouterDom = __webpack_require__(131);
+
+var _reactRouter = __webpack_require__(9);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -7875,8 +7883,12 @@ var Models = function (_React$Component) {
           return _react2.default.createElement(
             'div',
             { key: index, className: 'col-md-4 imageThumbs' },
-            _react2.default.createElement('h4', { className: 'hoverTextModel' }),
-            _react2.default.createElement('img', { src: model.imageUrl })
+            _react2.default.createElement(
+              _reactRouterDom.Link,
+              { to: { pathname: '/models/' + model.name, state: 'poop' } },
+              _react2.default.createElement('h4', { className: 'hoverTextModel' }),
+              _react2.default.createElement('img', { src: model.imageUrl })
+            )
           );
         }) : console.log('The page is loading.')
       );
@@ -13772,6 +13784,10 @@ var _FrontPage = __webpack_require__(278);
 
 var _FrontPage2 = _interopRequireDefault(_FrontPage);
 
+var _ModelProfile = __webpack_require__(129);
+
+var _ModelProfile2 = _interopRequireDefault(_ModelProfile);
+
 var _reactRouter = __webpack_require__(9);
 
 var _reactRouterDom = __webpack_require__(131);
@@ -13822,10 +13838,11 @@ var App = function (_React$Component) {
             _reactRouter.Switch,
             null,
             _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _FrontPage2.default }),
-            _react2.default.createElement(_reactRouterDom.Route, { path: '/models', component: _Models2.default }),
+            _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/models', component: _Models2.default }),
             _react2.default.createElement(_reactRouterDom.Route, { path: '/projects', component: _Projects2.default }),
             _react2.default.createElement(_reactRouterDom.Route, { path: '/contact', component: _Contact2.default }),
-            _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _About2.default })
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _About2.default }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/models/:name', component: _ModelProfile2.default })
           )
         )
       );
@@ -13854,6 +13871,12 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouterDom = __webpack_require__(131);
+
+var _axios = __webpack_require__(6);
+
+var _axios2 = _interopRequireDefault(_axios);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -13871,21 +13894,65 @@ var ModelProfile = function (_React$Component) {
   function ModelProfile(props) {
     _classCallCheck(this, ModelProfile);
 
-    return _possibleConstructorReturn(this, (ModelProfile.__proto__ || Object.getPrototypeOf(ModelProfile)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (ModelProfile.__proto__ || Object.getPrototypeOf(ModelProfile)).call(this, props));
+
+    _this.state = { name: _this.props.match.params.name };
+    return _this;
   }
 
   _createClass(ModelProfile, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      var _this2 = this;
+
+      (0, _axios2.default)({
+        method: 'POST',
+        url: '/modelindiv',
+        data: { model: this.state.name }
+      }).then(function (response) {
+        console.log('this is the axios call from ModelProfile.jsx (the response) :', response);
+        _this2.setState({ images: response.data });
+      }).catch(function (error) {
+        console.log('this is an error from the axios call in ModelProfile.jsx', error);
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
+      var modelPic = this.state.images ? this.state.images[0].imageUrls : '#';
       return _react2.default.createElement(
         'div',
         null,
         _react2.default.createElement(
-          'p',
-          null,
-          ' ',
-          this.props.test || 'This is the model profile page',
-          ' '
+          'div',
+          { className: 'row' },
+          _react2.default.createElement('img', { className: 'modelPrevPic col-md-4', src: modelPic, alt: 'Generic placeholder image' }),
+          _react2.default.createElement(
+            'div',
+            { className: 'col-md-8' },
+            _react2.default.createElement(
+              'h5',
+              { className: 'row modelName' },
+              'Model Name: ',
+              this.state.name && this.props.match.params.name
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'row modelPhotos' },
+          this.state.images ? this.state.images.map(function (model, index) {
+            return _react2.default.createElement(
+              'div',
+              { key: index, className: 'col-md-4 imageThumbs' },
+              _react2.default.createElement('h4', { className: 'hoverTextModel' }),
+              _react2.default.createElement(
+                'a',
+                { href: model.imageUrls },
+                _react2.default.createElement('img', { src: model.imageUrls })
+              )
+            );
+          }) : console.log('The page is loading.')
         )
       );
     }
