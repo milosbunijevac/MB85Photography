@@ -24,13 +24,18 @@ class Models extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="row">
-          <div className="col-md-4">
-
-          </div>
-        </div>
-
+      <div className="testModelBackground">
+            {(this.state.modelBucket.data !== 'Loading') ? this.state.modelBucket.data.map((model, index) => {
+              return (
+                <div key={index} className="col-md-4 imageThumbs">
+                  <h4 className="hoverTextModel">
+                    {/* <div className="row">{model.name}</div>
+                    <div className="row">Photos</div>  */}
+                  </h4>
+                  <img src={model.imageUrl} />
+                </div>
+              )
+            }) : console.log('The page is loading.')}
       </div>
     );
   }

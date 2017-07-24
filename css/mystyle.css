@@ -65,8 +65,19 @@ button.btn.btn-email {
 }
 
 .imageThumbs img {
-    width: 200px;
-    height: 159px;
+    max-width: 100%;
+}
+
+.col-md-4.imageThumbs {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.col-md-4.imageThumbs:hover {
+    padding-left: 0px;
+    padding-right: 0px;
+    opacity: 0.6;
+    transition-duration: 0.7s;
 }
 
 .modelThumbs img {
@@ -100,15 +111,8 @@ button.btn.btn-email {
     opacity: 0.8;
 }
 
-.aboutText {
-    height: 565px;
-    border-radius: 2px;
-    background-color: brown;
-    color: whitesmoke;
-}
-
 .contactPage {
-    background-color: gainsboro;
+    background-color: white;
     opacity: 0.8;
 }
 
@@ -188,4 +192,36 @@ div#app {
 .mainpageText {
     font-family: 'Bubbler One', sans-serif;
     text-align: center;
+}
+
+h4.hoverTextModel:hover {
+    position: absolute;
+    margin-left: 15px;
+    left: 40%;
+    top: 37%;
+    text-align: center;
+    color: white;
+    opacity: 1;
+}
+
+h4.hoverTextModel {
+    position: absolute;
+    margin-left: 15px;
+    left: 40%;
+    top: 37%;
+    text-align: center;
+    color: white;
+    opacity: 0;
+}
+
+.projectTitle {
+    text-align: center;
+}
+
+.comingSoon {
+    text-align: center;
+}
+
+.col-md-8>.aboutText {
+    color: black;
 }

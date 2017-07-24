@@ -7870,12 +7870,15 @@ var Models = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
-        _react2.default.createElement(
-          'div',
-          { className: 'row' },
-          _react2.default.createElement('div', { className: 'col-md-4' })
-        )
+        { className: 'testModelBackground' },
+        this.state.modelBucket.data !== 'Loading' ? this.state.modelBucket.data.map(function (model, index) {
+          return _react2.default.createElement(
+            'div',
+            { key: index, className: 'col-md-4 imageThumbs' },
+            _react2.default.createElement('h4', { className: 'hoverTextModel' }),
+            _react2.default.createElement('img', { src: model.imageUrl })
+          );
+        }) : console.log('The page is loading.')
       );
     }
   }]);
@@ -7916,29 +7919,26 @@ var Projects = function (_React$Component) {
   function Projects() {
     _classCallCheck(this, Projects);
 
-    var _this = _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).call(this));
-
-    _this.state = { someKey: 'someValue' };
-    return _this;
+    return _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).call(this));
   }
 
   _createClass(Projects, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'div',
+        "div",
         null,
         _react2.default.createElement(
-          'p',
-          null,
-          'Projects page'
+          "h3",
+          { className: "row projectTitle" },
+          "Projects page"
+        ),
+        _react2.default.createElement(
+          "h3",
+          { className: "row comingSoon" },
+          "This site feature is coming soon, please stay tuned."
         )
       );
-    }
-  }, {
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      this.setState({ someKey: 'otherValue' });
     }
   }]);
 
@@ -12203,16 +12203,25 @@ var About = function (_React$Component) {
         null,
         _react2.default.createElement(
           'div',
-          { className: 'col-sm-4' },
-          _react2.default.createElement('img', { className: 'aboutimage', src: 'rockpic.jpg' })
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'col-sm-8' },
+          { className: 'row' },
           _react2.default.createElement(
-            'p',
-            { className: 'aboutText' },
-            'My passion for photography started on a trip to San Francisco 3 years ago. Since then, I\'ve worked with some of the top models in New York City and have participated in three fashion weeks working runway shows. I shoot at various locations since I moved back to Cleveland, Ohio in November. Feel free to contact me using the form below if you have any questions, requests or business inquiries. Thanks!'
+            'div',
+            { className: 'col-md-4' },
+            _react2.default.createElement('img', { className: 'aboutimage', src: 'rockpic.jpg' })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'col-md-8' },
+            _react2.default.createElement(
+              'p',
+              { className: 'aboutText' },
+              'My passion for photography started on a trip to San Francisco 3 years ago. Since then, I\'ve worked with some of the top models in New York City and have participated in three fashion weeks working runway shows. I shoot at various locations since I moved back to Cleveland, Ohio in November.'
+            ),
+            _react2.default.createElement(
+              'p',
+              { className: 'aboutText' },
+              'My journey has also involved getting a degree in Chemical Engineering and working on software development. This website is my baby and work in progress. It\'s come a long way since the beginning but there\'s still plenty more to do.'
+            )
           )
         )
       );
@@ -13790,20 +13799,6 @@ var App = function (_React$Component) {
     _this.state = { modelBucket: { data: ['Loading'] } };
     return _this;
   }
-
-  // componentWillMount() {
-  //   axios({
-  //     method: 'POST',
-  //     url: '/modelcall'
-  //   })
-  //     .then((response) => {
-  //       console.log('this is the axios call from models.jsx (the response) :', response);
-  //       this.setState({modelBucket: response});
-  //     })
-  //     .catch((error) => {
-  //       console.log('this is an error from the axios call in models.jsx', error);
-  //     });
-  // }
 
   _createClass(App, [{
     key: 'render',
