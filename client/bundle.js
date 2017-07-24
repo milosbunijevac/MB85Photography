@@ -13931,7 +13931,7 @@ var ModelProfile = function (_React$Component) {
             'div',
             { className: 'col-md-8' },
             _react2.default.createElement(
-              'h5',
+              'h2',
               { className: 'row modelName' },
               'Model Name: ',
               this.state.name && this.props.match.params.name

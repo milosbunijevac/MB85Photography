@@ -34,7 +34,7 @@ class ModelProfile extends React.Component {
         <div className="row">
           <img className='modelPrevPic col-md-4' src={modelPic} alt="Generic placeholder image"/>
           <div className='col-md-8'>
-            <h5 className="row modelName">Model Name: {this.state.name && this.props.match.params.name}</h5>
+            <h2 className="row modelName">Model Name: {this.state.name && this.props.match.params.name}</h2>
           </div>
         </div>
 

@@ -42,10 +42,6 @@ class Models extends React.Component {
                 </div>
               )
             }) : console.log('The page is loading.')}
-
-        {/* <Switch>
-          <Route path='/models/:name' component={ModelProfile} />
-        </Switch> */}
       </div>
     );
   }

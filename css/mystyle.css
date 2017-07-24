@@ -233,3 +233,8 @@ img.modelPrevPic {
 .row.modelPhotos {
     margin-top: 20px;
 }
+
+h2.row.modelName {
+    font-family: 'Bubbler One', sans-serif;
+    font-weight: bold;
+}
