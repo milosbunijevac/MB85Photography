@@ -17,19 +17,19 @@ class App extends React.Component {
     this.state = { modelBucket: {data: ['Loading']}};
   }
 
-  componentWillMount() {
-    axios({
-      method: 'POST',
-      url: '/modelcall'
-    })
-      .then((response) => {
-        console.log('this is the axios call from models.jsx (the response) :', response);
-        this.setState({modelBucket: response});
-      })
-      .catch((error) => {
-        console.log('this is an error from the axios call in models.jsx', error);
-      });
-  }
+  // componentWillMount() {
+  //   axios({
+  //     method: 'POST',
+  //     url: '/modelcall'
+  //   })
+  //     .then((response) => {
+  //       console.log('this is the axios call from models.jsx (the response) :', response);
+  //       this.setState({modelBucket: response});
+  //     })
+  //     .catch((error) => {
+  //       console.log('this is an error from the axios call in models.jsx', error);
+  //     });
+  // }
 
   render() {
     return (

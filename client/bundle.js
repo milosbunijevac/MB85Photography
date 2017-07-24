@@ -7841,22 +7841,41 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Models = function (_React$Component) {
   _inherits(Models, _React$Component);
 
-  function Models() {
+  function Models(props) {
     _classCallCheck(this, Models);
 
-    var _this = _possibleConstructorReturn(this, (Models.__proto__ || Object.getPrototypeOf(Models)).call(this));
+    var _this = _possibleConstructorReturn(this, (Models.__proto__ || Object.getPrototypeOf(Models)).call(this, props));
 
-    _this.state = { modelList: [] };
+    _this.state = { modelBucket: { data: ['Loading'] } };
     return _this;
   }
 
   _createClass(Models, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      var _this2 = this;
+
+      (0, _axios2.default)({
+        method: 'POST',
+        url: '/modelcall'
+      }).then(function (response) {
+        console.log('this is the axios call from models.jsx (the response) :', response);
+        _this2.setState({ modelBucket: response });
+      }).catch(function (error) {
+        console.log('this is an error from the axios call in models.jsx', error);
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
         'div',
         null,
-        'ModelPage'
+        _react2.default.createElement(
+          'div',
+          { className: 'row' },
+          _react2.default.createElement('div', { className: 'col-md-4' })
+        )
       );
     }
   }]);
@@ -13772,22 +13791,21 @@ var App = function (_React$Component) {
     return _this;
   }
 
-  _createClass(App, [{
-    key: 'componentWillMount',
-    value: function componentWillMount() {
-      var _this2 = this;
+  // componentWillMount() {
+  //   axios({
+  //     method: 'POST',
+  //     url: '/modelcall'
+  //   })
+  //     .then((response) => {
+  //       console.log('this is the axios call from models.jsx (the response) :', response);
+  //       this.setState({modelBucket: response});
+  //     })
+  //     .catch((error) => {
+  //       console.log('this is an error from the axios call in models.jsx', error);
+  //     });
+  // }
 
-      (0, _axios2.default)({
-        method: 'POST',
-        url: '/modelcall'
-      }).then(function (response) {
-        console.log('this is the axios call from models.jsx (the response) :', response);
-        _this2.setState({ modelBucket: response });
-      }).catch(function (error) {
-        console.log('this is an error from the axios call in models.jsx', error);
-      });
-    }
-  }, {
+  _createClass(App, [{
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
